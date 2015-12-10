@@ -6,11 +6,13 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
+<%= render partial: 'layouts/header' %>
 <p id="flash"><%= flash.notice %></p>
 <%= yield %>
+
 
 </body>
 </html>

@@ -23,3 +23,17 @@ $('document').ready(function() {
     $('#flash').slideUp();
   }, 5000);
 });
+
+// sticky header that shrinks
+
+$(function() {
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+ 
+        if (scroll >= 1) {
+            $(".header-container").addClass('sticky');
+        } else {
+            $(".header-container").removeClass("sticky");
+        }
+    });
+});
