@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+
+// make flash go away after 5 seconds
+$('document').ready(function() {
+  setTimeout(function() {
+    $('#flash').slideUp();
+  }, 5000);
+});
