@@ -108,4 +108,53 @@ a {
   height: 260px;
 }
 
+/* highlight if current page */
+
+.active-nav{
+  color: #916A70;
+  border-bottom: 1px dotted #916A70;
+}
+
+/* -- forms css -- */
+.blog-form-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.blog-form-container p {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.blog-form-container label {
+    display:inline-block;
+    float:left;
+}
+
+.blog-form-container input {
+    height:30px; 
+    width:400px; 
+    font-size: 1em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+.blog-form-container textarea {width:600px;}
+.blog-form-container button {margin-left:156px;}
+
+.blog-form-container input, .blog-form-container textarea { 
+    border:1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius:2px;
+}
+.blog-form-container input:focus, .blog-form-container textarea:focus {
+    background: #fff; 
+    border:1px solid #916A70;
+    box-shadow: 0 0 3px #aaa; 
+}
+
+
+
 /* -- footer css -- */

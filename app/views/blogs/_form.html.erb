@@ -1,16 +1,16 @@
 <div class = "blog-form-container">
 <%= form_for @blog do |b| %>
 	<p>
-		<%= b.label :title %><br>
+		<%= b.label :title %>:<br>
 		<%= b.text_field :title %>
 	</p>
 	<p>
-		<%= b.label :date %><br>
+		<%= b.label :date %>:<br>
 		<%= b.text_field :date %>
 	</p>
 	<p>
-		<%= b.label :body %><br>
-		<%= b.text_area :body%>
+		<%= b.label :body %>:<br>
+		<%= b.text_area :body, :class => 'ckeditor'%>
 	</p>
 	<p>
 		<%= b.submit "Update"%>

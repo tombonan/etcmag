@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'about' => 'static_pages#about-the-mag'
   get 'about-the-site' => 'static_pages#about-the-site'
   get 'brand' => 'static_pages#brand'
+  get 'contact' => 'static_pages#contact'
 
 
 

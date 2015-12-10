@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ckeditor/init
 //= require turbolinks
 //= require_tree .
 
@@ -30,7 +31,7 @@ $(function() {
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
  
-        if (scroll >= 1) {
+        if (scroll >= 40) {
             $(".header-container").addClass('sticky');
         } else {
             $(".header-container").removeClass("sticky");
