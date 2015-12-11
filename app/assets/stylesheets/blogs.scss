@@ -9,10 +9,8 @@
   background-color: #e1f1fc;
   margin: 0 auto;
   text-align: center;
-  position: fixed;
   height: 140px;
   padding-top: 0px;
-  box-shadow: 0px 3px 12px 0px rgba(50, 50, 50, 0.25);
 }
 
 
@@ -44,16 +42,12 @@
   color: #916A70;
 }
 
-.blog-spacer {
-  height: 100px;
-}
 
 /* -- end blog header -- */
 
 .blog-container {
-	padding-top: 40px;
-	margin-top: 20px;
 	width: 42%;
+	margin-top: 20px;
 	margin-left: 20%;
 	height: 1000px;
 }

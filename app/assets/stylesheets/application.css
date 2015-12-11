@@ -58,7 +58,6 @@ a {
   text-align: center;
   height: 200px;
   padding-top: 60px;
-  position: fixed;
   -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -66,12 +65,24 @@ a {
     transition: all 0.3s;
 }
 
-.header-container.sticky {
-  height: 140px;
-  padding-top: 0px;
-  box-shadow:         0px 3px 12px 0px rgba(50, 50, 50, 0.25);
-  
+/* -- header slide down upon scroll -- */
+.header-container.animateIt {
+    position:fixed;
+    top:-260px;
+    left: 0;
+    right: 0;
+    z-index:999;
+    transition:0.4s top cubic-bezier(.3, .73, .3, .74);
+
+     height: 140px;
+    padding-top: 0px;
+    box-shadow:         0px 3px 12px 0px rgba(50, 50, 50, 0.25);
 }
+body.down .header-container.animateIt {
+    top:0;
+}
+
+
 
 .header-container h1 {
 	font-family: 'Playfair Display', serif;
@@ -104,9 +115,7 @@ a {
   color: #916A70;
 }
 
-.spacer {
-  height: 260px;
-}
+
 
 /* highlight if current page */
 

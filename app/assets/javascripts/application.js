@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require ckeditor/init
-//= require turbolinks
 //= require_tree .
 
 
@@ -27,14 +26,11 @@ $('document').ready(function() {
 
 // sticky header that shrinks
 
-$(function() {
-    $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
- 
-        if (scroll >= 40) {
-            $(".header-container").addClass('sticky');
-        } else {
-            $(".header-container").removeClass("sticky");
-        }
+$(document).ready(function () {
+    $(".header-container").before($(".header-container").clone().addClass("animateIt"));
+    $(window).on("scroll", function () {
+        $("body").toggleClass("down", ($(window).scrollTop() > 340));
     });
 });
+
+
