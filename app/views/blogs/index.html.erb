@@ -1,18 +1,5 @@
 <% provide(:title, 'Blog') %>
-<div class = "blog-header-container">
-	<h1><%= link_to "Etcetera Magazine", root_path %></h1>
-	<ul class = "blog-header-nav">
-		<li><p><%= link_to "About Us", about_path %></p></li>
-		<li><p><%= link_to "Blog", blogs_path, class: cp(blogs_path)  %></p></li>
-		<li><p><%= link_to "Magazine", root_path %></p></li>
-		<li><p><%= link_to "Previous Issues", root_path %></p></li>
-		<li><p><%= link_to "Contact"%></p></li>
-	</ul>
-</div>
 
-<div class = "blog-spacer">
-	&nbsp;
-</div>
 
 <div class = "blog-container">
 	<h1>EctMag Blog</h1>
@@ -20,9 +7,11 @@
 	<div id = "line-thick"></div>
 		<% for blog in @blogs do %>
 		<div class = "blog-article-container">
+			<div class = "blog-article-content">
 			<p id = "blog-article-date"><%= blog.date %></p>
 			<h3 id = "blog-article-title"><%= link_to blog.title, blog_path(blog)%></h3>
 			<p id = "blog-article-author">Author Name</p>
+		</div>
 		</div>
 		<% end %>
 </div>

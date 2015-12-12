@@ -12,7 +12,7 @@
 <%= render partial: 'layouts/header' unless @disable_nav %>
 <p id="flash"><%= flash.notice %></p>
 <%= yield %>
-
+<%= render partial: 'layouts/footer' %>
 
 </body>
 </html>

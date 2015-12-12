@@ -33,4 +33,14 @@ $(document).ready(function () {
     });
 });
 
+ $(document).ready(function () {
+    $(window).scroll(function () {
+        $('.header-text').toggleClass("hide", ($(window).scrollTop() > 340)),
+        $('.header-nav').toggleClass("up", ($(window).scrollTop() > 340)),
+        $('.circle').toggleClass("move", ($(window).scrollTop() > 340)),
+        $('.circle-text').toggleClass("size", ($(window).scrollTop() > 340));;
+     }); 
+});
+
+
 

@@ -1,5 +1,10 @@
 <div class = "header-container">
-	<h1><%= link_to "Etcetera Magazine", root_path %></h1>
+	<%= link_to root_path do %>
+	<div class = "circle">
+		<h2 class = "circle-text">&</h2>
+	</div>
+	<% end %>
+	<h1><%= link_to "Etcetera Magazine", root_path, class: "header-text" %></h1>
 	<ul class = "header-nav">
 		<li><p><%= link_to "About Us", about_path, class: cp(about_path) %></p></li>
 		<li><p><%= link_to "Blog", blogs_path, class: cp(blogs_path) %></p></li>
@@ -7,8 +12,4 @@
 		<li><p><%= link_to "Previous Issues", root_path %></p></li>
 		<li><p><%= link_to "Contact", contact_path, class: cp(contact_path) %></p></li>
 	</ul>
-</div>
-
-<div class = "spacer">
-	&nbsp;
 </div>

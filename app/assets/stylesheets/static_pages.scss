@@ -4,23 +4,88 @@
 /* -- home page css -- */
 .home-container {
 	width: 100%;
-
-
-	height: 1000px;
 }
 
 .punct-icons {
-	width: 60%;
-	margin: 30px auto;
+	width: 100%;
 	text-align: center;
+	height: 100px;
 }
 
 .punct-icons h1 {
 	font-family: 'Playfair Display', serif;
 	font-weight: 700;
   	font-size: 1.8em;
+	line-height: 100px;
   	color: #444;
   	display: inline-block;
   	padding-right: 10px;
   	padding-left: 10px;
+}
+
+.display-container {
+	width: 100%;
+	height: 506px;
+}
+
+.home-about-container {
+	height: 260px;
+	background-color: #fff;
+	width: 100%;
+	text-align: center;
+}
+
+.home-about-container h3 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	color: #444;
+	font-size: 1.4em;
+}
+
+.home-about-title {
+	width: 50%;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+
+#home-about-title {
+	width: 100%;
+	margin: 0 auto;
+	line-height: 0.1em;
+  	margin: 10px 0 20px; 
+    border-bottom: 1px solid #444; 
+}
+
+#home-about-title span {
+   background:#fff; 
+    padding:0 10px; 
+}
+
+#thin-line-home {
+	margin: 0 auto;
+	width: 64%;
+	background-color: #916A70; 
+	height: 1px;
+	margin-bottom: 1px;
+}
+
+.current-magazine-container {
+	margin: 0 auto;
+	width: 64%;
+	height: 360px;
+	background-color: #f6f6f6;
+	border-top: 2px solid #916A70; 
+}
+
+.current-magazine-container h3 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	color: #444;
+	font-size: 1.8em;
+	letter-spacing: 1px;
+	padding: 40px 0px 0px 140px;
+}
+
+.from-the-blog {
+	height: 400px;
 }
