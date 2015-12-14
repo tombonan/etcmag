@@ -2,16 +2,26 @@
 
 
 <div class = "blog-container">
-	<h1>EctMag Blog</h1>
+	<h1>EtcMag<span id = "red">Blog</span></h1>
 	<div id = "line-thin"></div>
 	<div id = "line-thick"></div>
-		<% for blog in @blogs do %>
-		<div class = "blog-article-container">
-			<div class = "blog-article-content">
-			<p id = "blog-article-date"><%= blog.date %></p>
-			<h3 id = "blog-article-title"><%= link_to blog.title, blog_path(blog)%></h3>
-			<p id = "blog-article-author">Author Name</p>
-		</div>
-		</div>
-		<% end %>
+	<div class = "blog-container-left">
+			<% for blog in @blogs do %>
+			<div class = "blog-article-container">
+				<div class = "blog-thumb-container">
+					<div class = "fake-image"></div>
+				</div>
+				<div class = "blog-article-content">
+					<p id = "blog-article-date"><%= blog.date %></p>
+					<h3 id = "blog-article-title"><%= link_to blog.title, blog_path(blog)%></h3>
+					<p id = "blog-article-author">Author Name</p>
+				</div>
+			</div>
+			<% end %>
+	</div>
+	
+	<div class = "blog-container-right">
+		<h5>Recent Contributers</h5>
+		<div class = "blog-h5-line"></div>
+	</div>
 </div>

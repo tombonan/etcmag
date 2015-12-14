@@ -1,9 +1,9 @@
 <div class = "header-container">
-	<%= link_to root_path do %>
 	<div class = "circle">
-		<h2 class = "circle-text">&</h2>
+		<a href="<%= root_path %>">
+		<%= image_tag(('e.png'), class: "circle-img") %>
+		</a>
 	</div>
-	<% end %>
 	<h1><%= link_to "Etcetera Magazine", root_path, class: "header-text" %></h1>
 	<ul class = "header-nav">
 		<li><p><%= link_to "About Us", about_path, class: cp(about_path) %></p></li>

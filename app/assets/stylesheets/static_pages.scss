@@ -23,13 +23,108 @@
   	padding-left: 10px;
 }
 
-.display-container {
+.blog-display-container {
+	width: 70%;
+	margin: 40px auto;
+	text-align: center;
+}
+
+.blog-display-container h3 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	color: #444;
+	font-size: 1.4em;
+	padding-top: 8px;
+}
+
+.home-blog-title-container {
+	margin: 0 auto; 
+	width: 68%;
+	margin-bottom: 60px;
+}
+
+#home-blog-title {
 	width: 100%;
-	height: 506px;
+	margin: 0 auto;
+	line-height: 0.1em;
+  	margin: 10px 0 20px; 
+    border-bottom: 1px solid #bebebe;
+    letter-spacing: 1px;
+}
+
+#home-blog-title span {
+   background:#fff; 
+    padding:0 10px; 
+}
+
+.blog-home-display {
+	width: 100%;
+	height: 140px;
+	padding-bottom: 34px;
+}
+
+.blog-display-left {
+	width: 30%;
+	float: left;
+	height: 139px;
+	text-align: left;
+}
+
+.blog-display-left h4{
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	color: #444;
+	color: #916A70; 
+	margin-top: -4px;
+}
+
+.fake-image-right {
+	margin: -30px 0px 0px 0px;
+	float: right;
+	display: inline-block;
+
+	height: 110px;
+	width: 110px;
+	background-color: #444;
+	position: relative;
+	top: 50%;
+  	transform: translateY(-50%);
+  	-webkit-clip-path: polygon(100% 0, 100% 100%, 25% 100%, 0 75%, 0 0);
+	clip-path: polygon(100% 0, 100% 100%, 25% 100%, 0 75%, 0 0);
+}
+
+.blog-display-right {
+	width: 69%;
+	float: right;
+	height: 139px;
+	text-align: left;
+}
+
+.blog-display-right h3 {
+	margin: -16px 0px 0px 50px;
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: 1.6em;
+	color: #444;
+}
+
+.blog-display-right h4 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 0.9em;
+	color: #916A70;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	margin: 0px 0px 0px 50px;
+}
+
+.blog-home-display {
+	margin: 0 auto;
+	width: 80%;
 }
 
 .home-about-container {
-	height: 260px;
+	margin-top: 160px;
+	margin-bottom: 220px;
 	background-color: #fff;
 	width: 100%;
 	text-align: center;
@@ -42,10 +137,62 @@
 	font-size: 1.4em;
 }
 
+/* -- icons css -- */
+
+.home-icon-container {
+	width: 20%;
+	margin: 0 auto;
+}
+
+.icon {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	text-indent: 105%;
+	white-space: nowrap;
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.laptop {
+	background: url(image_path('icons/laptop.png'));
+}
+
+.layer {
+	background: url(image_path('icons/layer.png'));
+}
+
+.box {
+	background: url(image_path('icons/box.png'));
+}
+
+.computer {
+	background: url(image_path('icons/computer.png'));
+}
+
+.coffee {
+	background: url(image_path('icons/coffee.png'));
+}
+
+.newspaper {
+	background: url(image_path('icons/newspaper.png'));
+}
+
+.pen-ruler {
+	background: url(image_path('icons/pen-ruler.png'));
+}
+
+.puzzle {
+	background: url(image_path('icons/puzzle.png'));
+}
+
 .home-about-title {
 	width: 50%;
 	margin: 0 auto;
-	padding-top: 20px;
+	padding-top: 10px;
 }
 
 #home-about-title {
@@ -53,7 +200,8 @@
 	margin: 0 auto;
 	line-height: 0.1em;
   	margin: 10px 0 20px; 
-    border-bottom: 1px solid #444; 
+    border-bottom: 1px solid #bebebe;
+    letter-spacing: 1px;
 }
 
 #home-about-title span {
@@ -61,8 +209,37 @@
     padding:0 10px; 
 }
 
-#thin-line-home {
+.home-about-text {
 	margin: 0 auto;
+	width: 46%;
+	text-align: justify;
+}
+
+.home-about-text h5 {
+	margin-top: 10px;
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	color: #444;
+	font-size: 16px;
+	float: right;
+	transition: color 0.2s;
+	color: #916A70; 
+}
+
+.home-about-text h5:hover {
+	color: rgba(44,62,80, 0.8);
+}
+
+.home-about-text p {
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	color: #444;
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+#thin-line-home {
+	margin: 40px auto;
 	width: 64%;
 	background-color: #916A70; 
 	height: 1px;
