@@ -22,6 +22,11 @@ font-family: 'Open Sans', sans-serif;
 body {    
     margin: 0 !important;
     padding: 0 !important;
+
+}
+
+* {
+margin: 0;
 }
 
 img {
@@ -47,6 +52,7 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+
 
 
 /* -- header css -- */
@@ -199,10 +205,105 @@ body.down .header-container.animateIt {
 /* -- footer css -- */
 .footer-container {
   width: 100%;
-  bottom: 0;
+  background-color: #eaedef;
 }
 
 .footer-container img {
   width: 100%;
   position: absolute;
+}
+
+.footer-text-container {
+  width: 100%;
+  margin-top: 192px;
+  position: absolute;
+  height: 200px;
+  background-color: #eaedef;
+}
+
+.footer-text {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.static-pages-ul {
+  list-style-type: none;
+  margin-top: 40px;
+}
+
+/* -- signup css -- */
+.signup-container {
+  width: 50%;
+  margin: 0 auto;
+  height: 200px;
+
+  text-align: center;
+}
+
+
+#signup-title {
+    width: 100%;
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+    border-bottom: 1px solid #bebebe;
+    letter-spacing: 1px;
+    margin-top: 50px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 1.4em;
+    color: #444;
+}
+
+#signup-title span {
+   background:#fff; 
+    padding:0 10px; 
+}
+
+.signup-container p {
+    margin-top: 2px;
+    font-family: 'Vollkorn', serif;
+    color: #7c7c7c;
+    font-size: 14px;
+}
+
+.signup-container input[type=text] {
+    margin-top: 24px; 
+    height:40px; 
+    width:400px; 
+    text-indent: 14px;
+    font-size: 1em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    border-left:1px solid #aaa;
+    border-top:1px solid #aaa;
+    border-bottom:1px solid #aaa;
+    box-shadow: none;
+    border-radius: 3px 0px 0px 3px;
+    vertical-align: bottom;
+}
+
+.signup-container input:focus {
+    outline: 0;
+}
+
+.signup-container input[type=submit] {
+  height:44px; 
+  width: 50px;
+  border:1px solid #aaa;
+  background-color: #fff;
+  padding-left: 0;
+  margin-left: -6px;
+  cursor: pointer;
+  text-indent: 5px;
+  border-radius: 0px 3px 3px 0px;
+  transition: background-color 0.2s;
+    font-size: 1.6em;
+    line-height: 20px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    color: #7c7c7c;
+}
+
+.signup-container input[type=submit]:hover {
+ background-color: #eee;
 }

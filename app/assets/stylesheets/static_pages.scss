@@ -74,7 +74,7 @@
 	font-family: 'Playfair Display', serif;
 	font-weight: 400;
 	color: #444;
-	color: #916A70; 
+	color: #745459;
 	margin-top: -4px;
 }
 
@@ -104,14 +104,14 @@
 	margin: -16px 0px 0px 50px;
 	font-family: 'Playfair Display', serif;
 	font-weight: 400;
-	font-size: 1.6em;
+	font-size: 1.8em;
 	color: #444;
 }
 
 .blog-display-right h4 {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Vollkorn', serif;
 	font-size: 0.9em;
-	color: #916A70;
+	color: #745459;
 	text-transform: uppercase;
 	letter-spacing: -1px;
 	margin: 0px 0px 0px 50px;
@@ -189,6 +189,7 @@
 	background: url(image_path('icons/puzzle.png'));
 }
 
+
 .home-about-title {
 	width: 50%;
 	margin: 0 auto;
@@ -223,7 +224,7 @@
 	font-size: 16px;
 	float: right;
 	transition: color 0.2s;
-	color: #916A70; 
+	color: #745459;
 }
 
 .home-about-text h5:hover {
@@ -263,6 +264,38 @@
 	padding: 40px 0px 0px 140px;
 }
 
-.from-the-blog {
-	height: 400px;
+
+
+
+
+/* -- about-the-magazine css -- */
+.about-the-mag-container {
+	width: 100%;
+	min-height: 100%;
+	height: 1000px;
 }
+
+.about-first {
+	width: 100%;
+	height: 440px;
+}
+
+.about-image-first {
+	float: left;
+	width: 58%;
+	background-image: url(image_path('about-image-first.png'));
+	height: 440px;
+}
+
+.about-text-first {
+	float: right;
+	height: 440px;
+	background-color: #eee;
+	width: 42%;
+}
+
+.about-second {
+	width: 100%;
+	height: 330px;
+}
+
