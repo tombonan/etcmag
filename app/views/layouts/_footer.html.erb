@@ -2,13 +2,26 @@
 	<%= image_tag('bucknell-footer.png') %>
 	<div class = "footer-text-container">
 		<div class = "footer-text">
-			<ul class = "static-pages-ul">
-				<li>Title</li>
-				<li>Home</li>
-				<li>About the Magazine</li>
-				<li>About the Website</li>
-				<li>Contact</li>
-			</ul>
+			<div class = "footer-logo">
+				
+			</div>
+			<div class = "footer-uls">
+				<ul class = "static-pages-ul">
+					<li id = "footer-title">Resources</li>
+					<li><%= link_to "Home", root_path %></li>
+					<li><%= link_to "About the Magazine", about_path %></li>
+					<li><%= link_to "About the Website", about_the_site_path %></li>
+					<li><%= link_to "Contact", contact_path %></li>
+				</ul>
+
+				<ul class = "magazine-pages-ul">
+					<li id = "footer-title">The Magazine</li>
+					<li><%= link_to "Current Issue" %></li>
+					<li><%= link_to "All Issues", issues_path %></li>
+					<li><%= link_to "EtcMag Blog", blogs_path %></li>
+					<li><%= link_to "Contributers" %></li>
+				</ul>
+			</div> <!-- footer-uls -->
 		</div>
 	</div>
 </div>
