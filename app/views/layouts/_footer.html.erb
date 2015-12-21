@@ -2,26 +2,27 @@
 	<%= image_tag('bucknell-footer.png') %>
 	<div class = "footer-text-container">
 		<div class = "footer-text">
-			<div class = "footer-logo">
-				
-			</div>
-			<div class = "footer-uls">
-				<ul class = "static-pages-ul">
-					<li id = "footer-title">Resources</li>
-					<li><%= link_to "Home", root_path %></li>
-					<li><%= link_to "About the Magazine", about_path %></li>
-					<li><%= link_to "About the Website", about_the_site_path %></li>
-					<li><%= link_to "Contact", contact_path %></li>
-				</ul>
-
-				<ul class = "magazine-pages-ul">
-					<li id = "footer-title">The Magazine</li>
-					<li><%= link_to "Current Issue" %></li>
-					<li><%= link_to "All Issues", issues_path %></li>
-					<li><%= link_to "EtcMag Blog", blogs_path %></li>
-					<li><%= link_to "Contributers" %></li>
-				</ul>
-			</div> <!-- footer-uls -->
+			<ul class = "static-pages-ul">
+				<li><%= link_to "Home", root_path %></li>
+				<li><%= link_to "About the Magazine", about_path %></li>
+				<li><%= link_to "About the Website", about_the_site_path %></li>
+				<li>The Etcetera Team</li>
+				<li><%= link_to "Contact", contact_path %></li>
+			</ul>
+			<ul class = "magazine-pages-ul">
+				<li><%= link_to "Current Issue", magazine_path %></li>
+				<li><%= link_to "All Issues", issues_path %></li>
+				<li><%= link_to "EtcMag Blog", blogs_path %></li>
+				<li><%= link_to "Contributers" %></li>
+			</ul>
+			<ul class = "social-ul">
+				<li><i class="fa fa-facebook-official" id = "social-icon"></i>Facebook</li>
+				<li><i class="fa fa-instagram" id = "social-icon"></i>Instagram</li>
+			</ul>
+			<ul class = "copyright-footer">
+				<li id = "copyright"><i class="fa fa-copyright"></i>2015 Etcetera Magazine, Bucknell University</li>
+				<li id = "site-design">Site designed by <a href="http://www.tombonan.com" target = "_blank" id = "tom-link">Tom Bonan</a></li>
+			</ul>
 		</div>
 	</div>
 </div>

@@ -1,5 +1,9 @@
 class IssuesController < ApplicationController
 	
+  	def latest
+    	redirect_to issue_url(Issue.last)
+  	end
+
 
 	def index
 		@issues = Issue.all

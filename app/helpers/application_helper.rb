@@ -11,4 +11,8 @@ module ApplicationHelper
   	def cp(path)
   		"active-nav" if current_page?(path)
 	end
+
+	def mag
+		"active-nav" if current_page?(Issue.last)
+	end
 end

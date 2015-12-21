@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   #magazine route
   resources :issues
+  get 'magazine' => 'issues#latest'
 
 
 

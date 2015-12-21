@@ -6,26 +6,135 @@
 	width: 100%;
 }
 
-.punct-icons {
+.feature-container {
+	width: 60%;
+	margin: 20px auto;
+}
+
+.feature-container img {
 	width: 100%;
+	z-index: 1;
+}
+
+.feature-container img:hover ~ .feature-content-container, .feature-tag:hover + .feature-content-container{
+	box-shadow: 0px 5px 20px 0px rgba(50, 50, 50, 0.5);
+}
+
+.feature-content-container {
+	width: 520px;
+	margin: 88px auto;
+	height: 140px;
+	position: relative;
+	transition: box-shadow 0.5s;
+	background-color: #fff;
 	text-align: center;
-	height: 100px;
 }
 
-.punct-icons h1 {
+.feature-content-container:after {
+	z-index: 10;
+	position: absolute;
+	height: 100%;
+	background-color: #fff;
+	display: block;
+	top: 0;
+  	left: 0;
+  	right: 0;
+}	
+
+.feature-content-container:hover {
+	box-shadow: 0px 5px 20px 0px rgba(50, 50, 50, 0.5);
+}
+
+.feature-tag {
+	height: 40px;
+	width: 120px;
+	margin: -100px auto;
+	position: relative;
+}
+
+#feature-text:after {
+	content: "Feature";
+	background-color: rgba(20,20,20,0.90);
+	z-index: 15;
+	position: absolute;
+	height: 40px;
+	display: block;
+	top: 0;
+  	left: 0;
+  	right: 0;
+}
+
+#feature-text {
+	height: 40px;
+	width: 120px;
+	position: relative;
+	text-align: center;
+	line-height: 40px;
 	font-family: 'Playfair Display', serif;
-	font-weight: 700;
-  	font-size: 1.8em;
-	line-height: 100px;
-  	color: #444;
-  	display: inline-block;
-  	padding-right: 10px;
-  	padding-left: 10px;
+	font-weight: 400;
+	font-size: 1.4em;
+	letter-spacing: 2px;
+	color: #fff;
+	z-index: 20;
 }
 
+#home-feature-title {
+	padding-top: 30px;
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: 1.8em;
+	color: #444;
+	z-index: 20;
+	letter-spacing: 1px;
+}
+
+.feature-content-container h4 {
+	padding-top: 10px;
+	font-family: 'Vollkorn', serif;
+    color: #696969;
+    font-size: 0.9em;
+    letter-spacing: 0px;
+}
+
+/* -- magazine preview css -- */
+
+.magazine-preview-container {
+	width: 100%;
+}
+
+.magazine-preview-img, .magazine-preview-text {
+	width: 28%;
+	padding-left: 2%;
+	padding-right: 2%;
+	display: inline-block;
+}
+.magazine-preview-img:first-child, .magazine-preview-text:first-child {
+	margin-left: 2%;
+}
+
+.magazine-preview-img img {
+	width: 100%;
+}
+
+.magazine-preview-text {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.magazine-preview-text h3 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: 1.4em;
+	letter-spacing: 1px;
+}
+
+
+
+
+/* -- blog preview css -- */
 .blog-display-container {
 	width: 70%;
-	margin: 40px auto;
+	margin: 90px auto;
 	text-align: center;
 }
 
@@ -39,7 +148,7 @@
 
 .home-blog-title-container {
 	margin: 0 auto; 
-	width: 68%;
+	width: 70%;
 	margin-bottom: 60px;
 }
 
@@ -70,38 +179,25 @@
 	text-align: left;
 }
 
-.blog-display-left h4{
-	font-family: 'Playfair Display', serif;
-	font-weight: 400;
-	color: #444;
-	color: #745459;
-	margin-top: -4px;
-}
-
 .fake-image-right {
-	margin: -30px 0px 0px 0px;
 	float: right;
 	display: inline-block;
-
 	height: 110px;
 	width: 110px;
 	background-color: #444;
-	position: relative;
-	top: 50%;
-  	transform: translateY(-50%);
   	-webkit-clip-path: polygon(100% 0, 100% 100%, 25% 100%, 0 75%, 0 0);
 	clip-path: polygon(100% 0, 100% 100%, 25% 100%, 0 75%, 0 0);
 }
 
 .blog-display-right {
-	width: 69%;
+	width: 70%;
 	float: right;
 	height: 139px;
 	text-align: left;
 }
 
 .blog-display-right h3 {
-	margin: -16px 0px 0px 50px;
+	margin: -17px 0px 0px 50px;
 	font-family: 'Playfair Display', serif;
 	font-weight: 400;
 	font-size: 1.8em;
@@ -109,12 +205,15 @@
 }
 
 .blog-display-right h4 {
-	font-family: 'Vollkorn', serif;
-	font-size: 0.9em;
-	color: #745459;
-	text-transform: uppercase;
-	letter-spacing: -1px;
 	margin: 0px 0px 0px 50px;
+
+}
+
+#home-blog-date {
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: 0.9em;
+	color: #444;
 }
 
 .blog-home-display {
@@ -123,8 +222,7 @@
 }
 
 .home-about-container {
-	margin-top: 160px;
-	margin-bottom: 220px;
+	margin-bottom: 100px;
 	background-color: #fff;
 	width: 100%;
 	text-align: center;
@@ -240,7 +338,7 @@
 }
 
 #thin-line-home {
-	margin: 40px auto;
+	margin: 80px auto;
 	width: 64%;
 	background-color: #916A70; 
 	height: 1px;
@@ -255,13 +353,48 @@
 	border-top: 2px solid #916A70; 
 }
 
-.current-magazine-container h3 {
+.fake-mag-cover {
+	width: 200px;
+	height: 260px;
+	background-color: #444;
+	float: left;
+	margin: 40px 0px 0px 100px;
+}
+
+.current-magazine-content {
+	margin: 30px 0px 0px 70px;
+	float: left;
+}
+
+.current-magazine-content h3 {
+	width: 170%;
+	border-bottom: 1px dotted #444;
 	font-family: 'Playfair Display', serif;
 	font-weight: 400;
 	color: #444;
 	font-size: 1.8em;
 	letter-spacing: 1px;
-	padding: 40px 0px 0px 140px;
+}
+
+.articles-list {
+	list-style-type: none;
+	margin: 10px 0px 0px 0px;
+}
+
+.articles-list li {
+	padding-top: 4px;
+	padding-bottom: 4px;
+	color: #444;
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+}
+
+#author-name {
+	font-family: 'Vollkorn', serif;
+	font-size: 0.9em;
+	color: #745459;
+	text-transform: uppercase;
+	letter-spacing: -1px;
 }
 
 

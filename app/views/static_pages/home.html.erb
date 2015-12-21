@@ -1,14 +1,61 @@
 <% provide(:title, 'Home') %>
 
 <div class = "home-container">
-	<% if false %>
-	<div class = "punct-icons">
-		<h1>Ħ</h1>
-		<h1>&</h1>
-		<h1>§</h1>
-		<h1>Æ</h1>
+	<div class = "feature-container">
+		<%=image_tag("feature-example.jpg") %>
+		<div class = "feature-tag">	
+			<h3 id = 'feature-text'></h3>
+		</div>
+		<div class = "feature-content-container">
+			<h3 id = "home-feature-title">Example Feature Title</h3>
+			<h5 id = "author-name">Author Name</h5>
+			<h4><i>Example feature subtitle goes here.</i></h4>
+		</div>
 	</div>
-	 <% end %>
+
+	<table class = "magazine-preview-container">
+		<tr>
+			<th class = "magazine-preview-img">
+				<%= image_tag("nyc.jpg") %>
+			</th>
+			<th class = "magazine-preview-img">
+				<%= image_tag("books.jpg") %>
+			</th>
+			<th class = "magazine-preview-img">
+				<%= image_tag("mag.jpg") %>
+			</th>
+		</tr>
+		<tr>
+			<td class = "magazine-preview-text" >
+				<h5 id = "author-name">Author Name</h5>
+				<h3>Lorem ipsum dolor sit amet</h3>
+			</td>
+			<td class = "magazine-preview-text" >
+				<h5 id = "author-name">Author Name</h5>
+				<h3>Consectetur adipiscing elit</h3>
+			</td>
+			<td class = "magazine-preview-text" >
+				<h5 id = "author-name">Author Name</h5>
+				<h3>Donec felis dolor, euismod non</h3>
+			</td>
+		</tr>
+	</table>
+
+	<div id = "thin-line-home"></div>
+	<div class = "current-magazine-container">
+		<div class = "fake-mag-cover"></div>
+		<div class = "current-magazine-content">
+			<h3><%= link_to "Current Issue Title", magazine_path %></h3>
+			<ul class = "articles-list">
+				<li>First Article &#8212; <span id = "author-name">Author Name</span></li>
+				<li>Second Article &#8212; <span id = "author-name">Author Name</span></li>
+				<li>Third Article &#8212; <span id = "author-name">Author Name</span></li>
+				<li>Fourth Article &#8212; <span id = "author-name">Author Name</span></li>
+				<li>Fifth Article &#8212; <span id = "author-name">Author Name</span></li>
+				<li>Sixth Article &#8212; <span id = "author-name">Author Name</span></li>
+			</ul>
+		</div>
+	</div>
 
 	<div class = "blog-display-container">
 		<div class = "home-icon-container">
@@ -23,12 +70,11 @@
 		<% for blog in @blogs do %>
 		<div class = "blog-home-display">
 			<div class = "blog-display-left">
-				<h4><%=blog.created_at.strftime("%d %b, %Y")%></h4>
 				<div class = "fake-image-right"></div>
 			</div>
 			<div class = "blog-display-right">
 				<h3><%= link_to blog.title, blog_path(blog)%></h3>
-				<h4>Author Name</h4>
+				<h4><span id = "author-name">Author Name</span> <span id = "home-blog-date">| <%=blog.created_at.strftime("%d %B, %Y")%></span></h4>
 			</div>
 		</div>
 		<% end %>
@@ -49,10 +95,7 @@
 			<h5><a href="/about">Continue Reading &#10147;</a></h5>
 		</div>
 	</div>
-	<div id = "thin-line-home"></div>
-	<div class = "current-magazine-container">
-		<h3>Current Issue Title</h3>
-	</div>
+	
 
 	<%= render partial: 'layouts/signup' %>
 	
