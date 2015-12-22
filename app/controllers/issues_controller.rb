@@ -1,7 +1,12 @@
 class IssuesController < ApplicationController
 	
   	def latest
-    	redirect_to issue_url(Issue.last)
+  		if Issue.all.count > 0 
+    		redirect_to issue_url(Issue.last)
+    	else 
+    		redirect_to root_url
+    	end
+
   	end
 
 

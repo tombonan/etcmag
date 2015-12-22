@@ -17,7 +17,7 @@
 
 /* 
 font-family: 'Playfair Display', serif; 
-font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
 */
 
 body {    
@@ -63,8 +63,8 @@ a {
 background-image: url("http://www.transparenttextures.com/patterns/cream-pixels.png");
   margin: 0 auto;
   text-align: center;
-  height: 220px;
-  padding-top: 20px;
+  height: 190px;
+  padding-top: 16px;
 }
 
 .circle {
@@ -141,7 +141,7 @@ body.down .header-container.animateIt {
   text-align: center;
   margin-left: 25px;
   margin-right: 25px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #444;
   font-size: 0.8em;
   text-transform: uppercase;
@@ -164,7 +164,7 @@ body.down .header-container.animateIt {
   font-size: 1.4em;
   padding-right: 6px;
   padding-left: 6px;
-  color: #2c3e50;
+  color: #444;
   transition: color 0.3s;
 }
 
@@ -262,7 +262,7 @@ body.down .header-container.animateIt {
   padding-top: 40px;
 }
 .magazine-pages-ul {
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
 .static-pages-ul li, .magazine-pages-ul li {

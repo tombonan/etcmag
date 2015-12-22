@@ -70,9 +70,8 @@
 	position: relative;
 	text-align: center;
 	line-height: 40px;
-	font-family: 'Playfair Display', serif;
-	font-weight: 400;
-	font-size: 1.4em;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.2em;
 	letter-spacing: 2px;
 	color: #fff;
 	z-index: 20;
@@ -354,9 +353,9 @@
 }
 
 .fake-mag-cover {
-	width: 200px;
+	width: 208px;
 	height: 260px;
-	background-color: #444;
+	background-image: url(image_path('etc-cover.jpg'));
 	float: left;
 	margin: 40px 0px 0px 100px;
 }
@@ -404,8 +403,7 @@
 /* -- about-the-magazine css -- */
 .about-the-mag-container {
 	width: 100%;
-	min-height: 100%;
-	height: 1000px;
+	height: 2000px;
 }
 
 .about-first {
@@ -423,12 +421,116 @@
 .about-text-first {
 	float: right;
 	height: 440px;
-	background-color: #eee;
+	background-color: #f6f6f6;
 	width: 42%;
 }
 
 .about-second {
 	width: 100%;
 	height: 330px;
+}
+
+.about-the-staff {
+	width: 50%;
+	margin: 0 auto;
+	padding-top: 10px;
+	text-align: center;
+}
+
+#staff-about-title {
+	width: 100%;
+	margin: 0 auto;
+	line-height: 0.12em;
+  	margin: 10px 0 20px; 
+    border-bottom: 1px solid #bebebe;
+    letter-spacing: 1px;
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: 1.4em;
+	color: #444;
+	margin-bottom: 50px;
+}
+
+#staff-about-title span {
+   	background:#fff; 
+    padding:0 10px; 
+}
+
+.staff-bio {
+	margin: 0 auto;
+	width: 86%;
+}
+
+.bio-content-right, .bio-content-left {
+	width: 30%;
+	height: 320px;
+	background-color: #fff;
+	border: 2px solid #444;
+	display: inline-block;
+	position: absolute;
+}
+
+
+.bio-content-right {
+	float: left;
+}
+
+.bio-content-left {
+	float: right;
+}
+
+#bio-name {
+	padding: 20px 0px 0px 50px;
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: 1.6em;
+	color: #444;
+	letter-spacing: 1px;
+}
+
+#position {
+	padding: 0px 0px 0px 50px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 0.8em;
+	letter-spacing: 2px;
+	color: #888888;
+}
+
+#bio-text {
+	padding: 20px 0px 0px 50px;
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.4;
+	color: #444;
+	text-align: justify;
+	width: 76%;
+}
+
+.staff-photo-left, .staff-photo-right {
+	width: 54%;
+	display: inline-block;
+}
+
+.staff-photo-left {
+	float: right;
+	margin-right: 1%;
+}
+
+.staff-photo-right {
+	float: left;
+	margin-left: 1%;
+}
+
+#one {
+	margin: 3% 0 0 18%;
+}
+
+#two {
+	margin: 36% 0 0 38%;
+}
+
+#three {
+	margin: 69% 0 0 18%;
 }
 

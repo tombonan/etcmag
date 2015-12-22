@@ -13,6 +13,8 @@ module ApplicationHelper
 	end
 
 	def mag
-		"active-nav" if current_page?(Issue.last)
+		if Issue.all.count > 0 
+			"active-nav" if current_page?(Issue.last)
+		end
 	end
 end

@@ -18,11 +18,11 @@ class BlogsController < ApplicationController
 	end
 
 	def edit
-		@blog = Blog.find(params[:id])
+		@blog = Blog.friendly.find(params[:id])
 	end
 
 	def update
-		@blog = Blog.find(params[:id])
+		@blog = Blog.friendly.find(params[:id])
 		if @blog.update_attributes(blog_params)
 			flash.notice = "Blog Post '#{@blog.title}' Updated!"
 			redirect_to @blog 
@@ -32,7 +32,7 @@ class BlogsController < ApplicationController
 	end
 
 	def show
-		@blog = Blog.find(params[:id])
+		@blog = Blog.friendly.find(params[:id])
 	end
 
 	def destroy
@@ -42,6 +42,6 @@ class BlogsController < ApplicationController
 	private
 
 	def blog_params
-		params.require(:blog).permit(:title, :date, :body)
+		params.require(:blog).permit(:title, :body)
 	end
 end
