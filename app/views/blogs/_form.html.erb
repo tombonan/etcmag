@@ -5,6 +5,9 @@
 		<%= b.text_field :title %>
 	</p>
 	<p>
+		<%= collection_select( :blog, :author_id, Author.all, :id, :name, {}, { :multiple => false}) %>
+	</p>
+	<p>
 		<%= b.label :body %>:<br>
 		<%= b.text_area :body, :class => 'ckeditor'%>
 	</p>

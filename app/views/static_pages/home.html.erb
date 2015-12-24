@@ -74,7 +74,7 @@
 			</div>
 			<div class = "blog-display-right">
 				<h3><%= link_to blog.title, blog_path(blog)%></h3>
-				<h4><span id = "author-name">Author Name</span> <span id = "home-blog-date">| <%=blog.created_at.strftime("%d %B, %Y")%></span></h4>
+				<h4><span id = "author-name"><%= blog.author.name %></span> <span id = "home-blog-date">| <%=blog.created_at.strftime("%d %B, %Y")%></span></h4>
 			</div>
 		</div>
 		<% end %>
