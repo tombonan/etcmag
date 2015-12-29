@@ -1,0 +1,15 @@
+<div class = "blog-form-container">
+<%= form_for @issue, :html => {:multipart => true} do |i| %>
+	<p>
+		<%= i.label :name %>:<br>
+		<%= i.text_field :name %>
+	</p>
+	<p>
+		<%= i.file_field :image %>
+	</p>
+	<p>
+		<%= i.submit "Update"%>
+	</p>
+
+<% end %>
+</div>

@@ -1,6 +1,8 @@
 class BlogsController < ApplicationController
 	def index
 		@blogs = Blog.all.order(created_at: :desc)
+		@authors = Author.all.order('name ASC')
+		#@authors = Author.all.to_a.sort_by { |a| a.name.split(' ')[1]}
 	end
 
 	def new

@@ -215,89 +215,113 @@ body.down .header-container.animateIt {
   position: absolute;
 }
 
-.footer-text-container {
+.footer-text-wrapper {
   width: 100%;
   margin-top: 192px;
   position: absolute;
-  height: 200px;
-}
-
-.footer-text {
-  width: 100%;
-  height: 200px;
   background-color: #eaedef; 
 }
 
-.static-pages-ul, .magazine-pages-ul {
-    list-style-type: none;
-    margin: 0 auto;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+.footer-text-container {
+  width: 80%;
+  height: 240px;
+  margin: 20px auto;
+  border-bottom: 1px solid #bebebe;
 }
 
-.static-pages-ul {
-  padding-top: 40px;
-}
-.magazine-pages-ul {
-  padding-top: 30px;
-}
-
-.static-pages-ul li, .magazine-pages-ul li {
-  display: inline-block;
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
-  color: #636363;
-  font-size: 0.9em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.footer-text-left {
+  float: left;
+  width: 50%;
+  height: 180px;
 }
 
-.static-pages-ul li a:hover, .magazine-pages-ul li a:hover {
+.footer-text-right {
+  float: right;
+  width: 50%;
+  height: 180px;
+}
+
+.footer-text-right ul {
+  list-style-type: none;
+  font-family: 'Raleway', sans-serif;
+  color: #444;
+  font-size: 1em;
+}
+
+.footer-text-right ul li a:hover {
   text-decoration: underline;
 }
 
-.static-pages-ul li {
-  padding-left: 30px;
-  padding-right: 30px;
+#foot-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2em;
+  color: #2c3e50;
+  letter-spacing: 1px;
 }
 
-.magazine-pages-ul li {
-  padding-left: 40px;
-  padding-right: 40px;
+.footer-social {
+  margin-left: 10%;
+  width: 20%;
+  float: left;
 }
 
-.social-ul {
-  width: 24%;
-  border-top: 1px solid #bebebe;
-  list-style-type: none;
-  margin: 20px auto;
-  text-align: center;
+
+.footer-contact {
+  margin-left: 10%;
+  width: 60%;
+  float: left;
 }
 
-.social-ul li {
-  margin-top: 20px;
+.footer-icon {
   display: inline-block;
-  padding-left: 22px;
-  padding-right: 22px;
-  text-transform: uppercase;
-  font-family: 'Vollkorn', serif;
-  font-size: 12px;
-  color: #636363;
+  position: relative;
+  overflow: hidden;
+  text-indent: 105%;
+  white-space: nowrap;
+  width: 32px;
+  height: 32px;
+  margin-left: 5px;
+  margin-right: 5px;
+  vertical-align: middle;
 }
 
-.social-ul li:first-child {
-  margin-left: -24px;
+.footer-mail {
+  display: inline-block;
+  position: relative;
+  height: 24px;
+  width: 24px;
+  text-indent: 105%;
+  white-space: nowrap;
+  margin-left: 5px;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
-#social-icon {
-  padding-right: 5px;
+.footer-contact {
+  display: inline-block;
+  line-height: 24px;
+}
+
+.magazine-pages-ul {
+  width: 40%;
+  float: right;
+}
+
+.static-pages-ul {
+  width: 40%;
+  float: left;
+}
+
+.static-pages-ul li, .magazine-pages-ul li {
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 .copyright-footer {
-  width: 90%;
+  width: 80%;
   list-style-type: none;
-  margin: 50px auto;
+  margin: 0px auto;
+  padding: 0px 0px 20px 0px;
 }
 
 .copyright-footer li {
@@ -323,12 +347,13 @@ body.down .header-container.animateIt {
   color: #7c7c7c;
 }
 
+
+
 /* -- signup css -- */
 .signup-container {
   width: 50%;
   margin: 0 auto;
   height: 200px;
-
   text-align: center;
 }
 
@@ -376,13 +401,14 @@ body.down .header-container.animateIt {
 
 .signup-container input:focus {
     outline: 0;
+    box-shadow:inset 0 0 0px 1px #d6d6d6;
 }
 
 .signup-container input[type=submit] {
   height:44px; 
   width: 50px;
   border:1px solid #aaa;
-  background-color: #fff;
+  background-color: #f8f8f8;
   padding-left: 0;
   margin-left: -6px;
   cursor: pointer;

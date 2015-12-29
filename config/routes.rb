@@ -15,10 +15,18 @@ Rails.application.routes.draw do
   get 'brand' => 'static_pages#brand'
   get 'contact' => 'static_pages#contact'
 
-  #magazine route
-  resources :issues
+  #magazine routes
+  resources :issues do 
+    resources :articles, except: :index
+  end
+  
   get 'magazine' => 'issues#latest'
 
+  #author routes
+  scope do
+     resources :authors, path: 'contributors'
+  end
+ 
 
 
 

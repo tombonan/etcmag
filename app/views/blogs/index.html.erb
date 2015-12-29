@@ -13,14 +13,19 @@
 				</div>
 				<div class = "blog-article-content">
 					<h3 id = "blog-article-title"><%= link_to blog.title, blog_path(blog)%></h3>
-					<p id = "blog-article-author"><%= blog.author.name %></p>
+					<p id = "blog-article-author"><%=link_to blog.author.name, author_path(blog.author)%></p>
 				</div>
 			</div>
 			<% end %>
 	</div>
 	
 	<div class = "blog-container-right">
-		<h5>Our Contributers</h5>
+		<h5>Our Contributors</h5>
 		<div class = "blog-h5-line"></div>
+			<div class = "contributors-list">
+			<% for author in @authors do %>
+				<h4 class = "contributor"><%= link_to author.name, author_path(author) %></h4>
+			<% end %>
+			</div>
 	</div>
 </div>

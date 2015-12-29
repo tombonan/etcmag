@@ -79,6 +79,10 @@
 	margin-top: 20px;
 }
 
+.blog-article-content a:hover {
+	text-decoration: underline;
+}
+
 #blog-article-date {
 	font-family: 'Playfair Display', serif;
 	font-weight: 400;
@@ -100,10 +104,11 @@
 	color: #825f65;
 	text-transform: uppercase;
 	letter-spacing: -1px;
+	margin-top: 6px;
 }
 
 .blog-container-right h5 {
-	text-align: center;
+	margin-left: 7%;
 	font-family: 'Playfair Display', serif;
 	font-weight: 400;
   	font-size: 1.2em;
@@ -114,6 +119,28 @@
 	margin: 5px auto;
 	width: 86%;
 	border-bottom: 1px solid #bebebe;
+}
+
+.contributors-list {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.contributor:first-child {
+	margin-top: 10px;
+}
+
+.contributor {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: 0.9em;
+	color: #444;
+}
+
+.contributor:hover {
+	color: #916A70;
 }
 
 /* -- blog show css -- */
@@ -153,6 +180,10 @@
 .blog-head-content h4 {
 	padding-top: 10px;
 	font-size: 1em;
+}
+
+.blog-head-content a:hover {
+	text-decoration: underline;
 }
 
 .blog-image {

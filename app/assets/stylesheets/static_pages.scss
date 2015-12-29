@@ -203,8 +203,12 @@
 	color: #444;
 }
 
+.blog-display-right a:hover {
+	text-decoration: underline;
+}
+
 .blog-display-right h4 {
-	margin: 0px 0px 0px 50px;
+	margin: 6px 0px 0px 50px;
 
 }
 
@@ -510,6 +514,8 @@
 .staff-photo-left, .staff-photo-right {
 	width: 54%;
 	display: inline-block;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 
 .staff-photo-left {
@@ -523,14 +529,14 @@
 }
 
 #one {
-	margin: 3% 0 0 18%;
+	margin: 6% 0 0 18%;
 }
 
 #two {
-	margin: 36% 0 0 38%;
+	margin: 45% 0 0 38%;
 }
 
 #three {
-	margin: 69% 0 0 18%;
+	margin: 84% 0 0 18%;
 }
 

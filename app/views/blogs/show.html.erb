@@ -5,7 +5,7 @@
 		<div class = "blog-head-content">
 			<h3><%= @blog.created_at.strftime("%d %B, %Y")%></h3>
 			<h1><%= @blog.title %></h1>
-			<h4 id = "author-name"><%= @blog.author.name %></h4>
+			<h4 id = "author-name"><%= link_to @blog.author.name, author_path(@blog.author) %></h4>
 		</div>
 	</div>
 

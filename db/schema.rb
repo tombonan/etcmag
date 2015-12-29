@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151224174620) do
+ActiveRecord::Schema.define(version: 20151229044904) do
+
+  create_table "articles", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "slug"
+    t.integer  "author_id"
+    t.integer  "issue_id"
+  end
+
+  add_index "articles", ["author_id"], name: "index_articles_on_author_id"
+  add_index "articles", ["issue_id"], name: "index_articles_on_issue_id"
+  add_index "articles", ["slug"], name: "index_articles_on_slug"
 
   create_table "authors", force: :cascade do |t|
     t.string   "name"
@@ -20,7 +34,10 @@ ActiveRecord::Schema.define(version: 20151224174620) do
     t.text     "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "slug"
   end
+
+  add_index "authors", ["slug"], name: "index_authors_on_slug"
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
@@ -38,6 +55,10 @@ ActiveRecord::Schema.define(version: 20151224174620) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "slug"
+    t.string   "image"
   end
+
+  add_index "issues", ["slug"], name: "index_issues_on_slug"
 
 end
