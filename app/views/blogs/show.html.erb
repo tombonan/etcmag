@@ -10,7 +10,7 @@
 	</div>
 
 	<div class = "blog-image">
-		<%= image_tag('blog-placeholder.jpg') %>
+		<%=image_tag(@blog.image_url(:thumb).to_s, :class => "") %>
 	</div>
 
 	<div class = "blog-show-text">

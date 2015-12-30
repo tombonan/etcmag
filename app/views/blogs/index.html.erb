@@ -5,27 +5,24 @@
 	<h1>EtcMag<span id = "red">Blog</span></h1>
 	<div id = "line-thin"></div>
 	<div id = "line-thick"></div>
-	<div class = "blog-container-left">
-			<% for blog in @blogs do %>
-			<div class = "blog-article-container">
-				<div class = "blog-thumb-container">
-					<div class = "fake-image"></div>
+		<% for blog in @blogs do %>
+		<div class = "blog-block">
+			<%= link_to(blog) do %>
+				<div class = "blog-block-left">
+					<%=image_tag(blog.image_url(:thumb).to_s, :class => "blog-left-image") %>
 				</div>
-				<div class = "blog-article-content">
-					<h3 id = "blog-article-title"><%= link_to blog.title, blog_path(blog)%></h3>
-					<p id = "blog-article-author"><%=link_to blog.author.name, author_path(blog.author)%></p>
+			<% end %>
+
+			<div class = "blog-block-right">
+				<h4><%= link_to blog.title, blog_path(blog) %></h4>
+				<h5><%=blog.created_at.strftime("%d %B, %Y")%></h5>
+				<p>
+					<%= truncate(blog.body.html_safe, length: 300, separator: ' ', :escape => false) %>
+				</p>
+				<div class = "posted-by">
+					<h3>Posted by <span id = "blog-index-red"><%= link_to blog.author.name.split(' ')[0], author_path(blog.author) %></span></h3>
 				</div>
 			</div>
-			<% end %>
-	</div>
-	
-	<div class = "blog-container-right">
-		<h5>Our Contributors</h5>
-		<div class = "blog-h5-line"></div>
-			<div class = "contributors-list">
-			<% for author in @authors do %>
-				<h4 class = "contributor"><%= link_to author.name, author_path(author) %></h4>
-			<% end %>
-			</div>
-	</div>
+		</div>
+		<% end %>	
 </div>

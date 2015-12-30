@@ -1,8 +1,11 @@
 <div class = "blog-form-container">
-<%= form_for @blog do |b| %>
+<%= form_for @blog, :html => {:multipart => true} do |b| %>
 	<p>
 		<%= b.label :title %>:<br>
 		<%= b.text_field :title %>
+	</p>
+	<p>
+		<%= b.file_field :image %>
 	</p>
 	<p>
 		<%= collection_select( :blog, :author_id, Author.all.order('name ASC'), :id, :name, {}, { :multiple => false}) %>

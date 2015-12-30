@@ -3,15 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .blog-container {
-	width: 64%;
+	width: 66%;
 	margin: 40px auto;
-	height: 1000px;
+	height: 2000px;
 }
 
 .blog-container h1 {
 	font-family: 'Playfair Display', serif;
 	font-weight: 400;
-  	font-size: 2.4em;
+  	font-size: 2.6em;
   	color: #444;
 }
 
@@ -32,8 +32,76 @@
 	width: 100%;
 	height: 2px;
 	background-color: #916A70;
+	margin-bottom: 30px;
+}
+.blog-block {
+}
+.blog-block-left {
+	width: 73.6%;
+	float: left;
 }
 
+.blog-left-image {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.blog-block-right {
+	width: 25%;
+	height: 500px;
+	float: right;
+	background-color: #ede0ce;
+	border-radius: 1%;
+	position: relative;
+}
+
+.blog-block-right a:hover {
+	text-decoration: underline;
+}
+
+.blog-block-right h4, .blog-block-right h5, .blog-block-right p{
+	font-family: 'Playfair Display', serif;
+  	color: #444;
+}
+
+.blog-block-right h4 {
+	font-size: 1.1em;
+	padding: 15px 20px 0px 20px;
+	font-weight: 700;
+}
+
+.blog-block-right h5 {
+	font-size: 0.8em;
+	padding: 0px 0px 0px 20px;
+	font-weight: 400;
+}
+
+.blog-block-right p {
+	font-weight: 400;
+	font-size: 0.8em;
+	padding: 10px 20px 0px 20px;
+}
+
+.posted-by {
+	width: 100%;
+	vertical-align: bottom;
+	position: absolute;
+	bottom: 25px;
+}
+
+.posted-by h3 {
+	font-family: 'Playfair Display', serif;
+  	color: #444;
+	font-size: 0.9em;
+	font-weight: 400;
+	padding: 0px 20px 0px 20px;
+}
+
+#blog-index-red {
+	color: rgba(152,5,5,0.9)
+}
+
+/*
 .blog-container-left {
 	width: 69%;
 	float: left;
@@ -142,6 +210,7 @@
 .contributor:hover {
 	color: #916A70;
 }
+*/
 
 /* -- blog show css -- */
 
