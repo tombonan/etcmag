@@ -1,1 +1,34 @@
 <% provide(:title, "#{@author.name}") %>
+<% if @blogs.count > 0 %>
+<div class = "author-show-wrapper">
+<div class = "from-the-blog-show">
+	<div class = "home-icon-container">
+		<span class = "icon laptop"></span>
+		<span class = "icon box"></span>
+		<span class = "icon layer"></span>
+		<span class = "icon computer"></span>
+	</div>
+	<div class = "author-blog-title-container">
+		<h3 id = "author-blog-title"><span>From The Blog</span></h3>
+	</div>
+</div> <!-- from the blog show -->
+<% end %>
+
+<div class = "author-blog-container">
+			<% for blog in @blogs do %>
+			<div class = "author-blog">
+					<div class = "author-blog-thumb">
+						<%= link_to(blog) do %>
+							<%= image_tag(blog.image_url.to_s, :class => "author-blog-image") %>
+						<% end %>
+					</div><!-- author-blog-thumb -->
+				<div class = "blog-author-content">
+					<h3 id = "blog-author-show-title"><%= link_to blog.title, blog_path(blog)%></h3>
+					<p id = "blog-author-show-date"><%=blog.created_at.strftime("%d %B, %Y")%></p>
+				</div><!-- blog-author-content -->
+			</div> <!-- author-blog -->
+			<% end %>
+</div><!-- author-blog-container -->
+</div><!-- author-show-container -->
+
+

@@ -70,11 +70,13 @@
 		<% for blog in @blogs do %>
 		<div class = "blog-home-display">
 			<div class = "blog-display-left">
-				<div class = "fake-image-right"></div>
+				<%= link_to(blog) do %>
+					<%= image_tag(blog.image_url.to_s, :class => "blog-home-image") %>
+				<% end %>
 			</div>
 			<div class = "blog-display-right">
 				<h3><%= link_to blog.title, blog_path(blog)%></h3>
-				<h4><span id = "author-name"><%= link_to blog.author.name, author_path(blog.author) %></span> <span id = "home-blog-date">| <%=blog.created_at.strftime("%d %B, %Y")%></span></h4>
+				<h4><span id = "author-name"><%= link_to blog.author.name, author_path(blog.author) %></span><span id = "home-blog-date"> | <%=blog.created_at.strftime("%d %B, %Y")%></span></h4>
 			</div>
 		</div>
 		<% end %>

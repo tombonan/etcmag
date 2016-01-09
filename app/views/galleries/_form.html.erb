@@ -1,0 +1,18 @@
+<div class = "blog-form-container">
+<%= form_for([@issue, @gallery]) do |g| %>
+	<p>
+		<%= g.label :title %>:<br>
+		<%= g.text_field :title %>
+	</p>
+	<p>
+		<%= collection_select( :article, :author_id, Author.all.order('name ASC'), :id, :name, {}, { :multiple => false}) %>
+	</p>
+	<p>
+		<%= g.label :body %>:<br>
+		<%= g.text_area :body, :class => 'ckeditor'%>
+	</p>
+	<p>
+		<%= g.submit "Update"%>
+	</p>
+<% end %>
+</div>

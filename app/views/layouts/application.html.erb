@@ -12,7 +12,9 @@
 </head>
 <body>
 <%= render partial: 'layouts/header' unless @disable_nav %>
-<p id="flash"><%= flash.notice %></p>
+<% if flash[:notice] %>
+	<p id="flash"><%= flash.notice %></p>
+<% end %>
 
 <%= yield %>
 

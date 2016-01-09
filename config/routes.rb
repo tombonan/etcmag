@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   #magazine routes
   resources :issues do 
     resources :articles, except: :index
+    resources :galleries, except: :index
   end
   
   get 'magazine' => 'issues#latest'

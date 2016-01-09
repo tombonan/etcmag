@@ -21,6 +21,7 @@ class AuthorsController < ApplicationController
 
 	def show
 		@author = Author.friendly.find(params[:id])
+		@blogs = @author.blogs.order(created_at: :desc)
 	end
 
 private

@@ -2,9 +2,11 @@
 
 
 <div class = "blog-container">
-	<h1>EtcMag<span id = "red">Blog</span></h1>
-	<div id = "line-thin"></div>
-	<div id = "line-thick"></div>
+	<div class = "blog-index-title">
+		<h1>EtcMag<span id = "red">Blog</span></h1>
+		<div id = "line-thin"></div>
+		<div id = "line-thick"></div>
+	</div>
 		<% for blog in @blogs do %>
 		<div class = "blog-block">
 			<%= link_to(blog) do %>

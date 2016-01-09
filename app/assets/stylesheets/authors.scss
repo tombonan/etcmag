@@ -1,3 +1,164 @@
 // Place all the styles related to the Authors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.author-show-wrapper {
+	width: 100%;
+	height: 500px;
+}
+.from-the-blog-show {
+	width: 70%;
+	margin: 30px auto;
+	text-align: center;
+}
+
+.author-blog-title-container {
+	margin: 0 auto; 
+	width: 70%;
+	margin-bottom: 60px;
+}
+
+#author-blog-title {
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	color: #444;
+	font-size: 1.4em;
+	padding-top: 8px;
+	width: 100%;
+	margin: 0 auto;
+	line-height: 0.1em;
+  	margin: 10px 0 20px; 
+    border-bottom: 1px solid #bebebe;
+    letter-spacing: 1px;
+}
+
+#author-blog-title span {
+   background:#fff; 
+    padding:0 10px; 
+}
+
+.author-blog-container {
+	width: 44%;
+	margin: 0 auto;
+}
+
+.author-blog {
+	margin-top: 30px;
+	width: 100%;
+	height: 140px;
+	border-bottom: 1px dotted #444;
+}
+
+.author-blog:last-child {
+	border-bottom: none;
+}
+
+.author-blog-image {
+	float: left;
+	display: inline-block;
+	height: 110px;
+	width: 110px;
+	-webkit-clip-path: polygon(100% 0, 100% 100%, 25% 100%, 0 75%, 0 0);
+	clip-path: polygon(100% 0, 100% 100%, 25% 100%, 0 75%, 0 0);
+}
+
+.blog-author-content {
+	display: inline-block;
+	float: left;
+}
+
+#blog-author-show-title {
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+  	font-size: 1.8em;
+  	color: #444;
+  	margin-top: -10px;
+  	margin-left: 20px;
+}
+
+#blog-author-show-title:hover {
+	text-decoration: underline;
+}
+
+#blog-author-show-date {
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: 1em;
+	margin-left: 20px;
+}
+
+/* 
+.blog-container-left {
+	width: 69%;
+	float: left;
+	margin-top: 24px;
+	border-right: 1px solid #bebebe;
+	padding-right: 2.5%;
+}
+
+.blog-container-right {
+	float: right;
+	margin-top: 20px;
+	width: 26%;
+	height: 400px;
+}
+
+.blog-article-container {
+	width: 100%;
+	height: 170px;
+	border-bottom: 1px dotted #444;
+}
+
+.blog-thumb-container {
+	float: left;
+	width: 40%;
+	height: 169px;
+}
+
+.fake-image {
+	height: 130px;
+	width: 130px;
+	margin: 0 auto;
+	background-color: #444;
+	position: relative;
+	top: 50%;
+  	transform: translateY(-50%);
+  	-webkit-clip-path: polygon(100% 0, 100% 100%, 25% 100%, 0 75%, 0 0);
+	clip-path: polygon(100% 0, 100% 100%, 25% 100%, 0 75%, 0 0);
+}
+
+.blog-article-content {
+	float: right;
+	width: 60%;
+	margin-top: 20px;
+}
+
+.blog-article-content a:hover {
+	text-decoration: underline;
+}
+
+#blog-article-date {
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+  	font-size: 1em;
+  	color: #444;
+}
+
+#blog-article-title {
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+  	font-size: 1.8em;
+  	color: #444;
+  	margin-top: -5px;
+}
+
+#blog-article-author {
+	font-family: 'Vollkorn', serif;
+	font-size: 0.9em;
+	color: #825f65;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	margin-top: 6px;
+}
+*/

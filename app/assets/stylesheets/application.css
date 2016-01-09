@@ -54,7 +54,21 @@ a {
 	color: inherit;
 }
 
-
+/* -- flash css -- */
+#flash {
+  width: 40%;
+  text-align: center;
+  font-size: 1.4em;
+  margin: 0 auto;
+  color: #4F8A10;
+  background-color: #DFF2BF;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  border: 1px solid;
+  padding: 15px 20px 15px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 /* -- header css -- */
 .header-container {
@@ -201,6 +215,21 @@ body.down .header-container.animateIt {
     background: #fff; 
     border:1px solid #916A70;
     box-shadow: 0 0 3px #aaa; 
+}
+
+#validation-error-message {
+  width: 40%;
+  text-align: center;
+  font-size: 1.4em;
+  margin: 0 auto;
+  color: #D8000C;
+  background-color: #FFBABA;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  border: 1px solid;
+  padding: 15px 20px 15px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 

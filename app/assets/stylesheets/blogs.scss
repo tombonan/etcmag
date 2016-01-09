@@ -3,9 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .blog-container {
-	width: 66%;
+	width: 100%;
 	margin: 40px auto;
-	height: 2000px;
+	margin-bottom: 2400px;
+}
+
+.blog-index-title {
+	width: 990px;
+	margin: 0 auto;
 }
 
 .blog-container h1 {
@@ -35,24 +40,32 @@
 	margin-bottom: 30px;
 }
 .blog-block {
+	margin: 0 auto;
+	width: -webkit-fit-content;
+  	width: -moz-fit-content;
+  	width: fit-content;
 }
+
 .blog-block-left {
-	width: 73.6%;
+	width: 750px;
 	float: left;
 }
 
 .blog-left-image {
-	width: 100%;
-	margin-bottom: 10px;
+	margin-bottom: 8px;
+	margin-right: 0;
+	height: 500px;
+	width: 738px;
 }
 
 .blog-block-right {
-	width: 25%;
+	width: 240px;
 	height: 500px;
-	float: right;
+	float: left;
 	background-color: #ede0ce;
 	border-radius: 1%;
 	position: relative;
+	margin-left: 0px;
 }
 
 .blog-block-right a:hover {

@@ -168,7 +168,7 @@
 .blog-home-display {
 	width: 100%;
 	height: 140px;
-	padding-bottom: 34px;
+	padding-bottom: 24px;
 }
 
 .blog-display-left {
@@ -178,13 +178,12 @@
 	text-align: left;
 }
 
-.fake-image-right {
+.blog-home-image {
 	float: right;
 	display: inline-block;
 	height: 110px;
 	width: 110px;
-	background-color: #444;
-  	-webkit-clip-path: polygon(100% 0, 100% 100%, 25% 100%, 0 75%, 0 0);
+	-webkit-clip-path: polygon(100% 0, 100% 100%, 25% 100%, 0 75%, 0 0);
 	clip-path: polygon(100% 0, 100% 100%, 25% 100%, 0 75%, 0 0);
 }
 
@@ -201,6 +200,9 @@
 	font-weight: 400;
 	font-size: 1.8em;
 	color: #444;
+}
+
+.blog-display-right h4 {
 }
 
 .blog-display-right a:hover {
