@@ -45,3 +45,25 @@ $(document).ready(function () {
 
 
 
+// home sticky header 
+
+$(document).ready(function () {
+    $(".home-header-container").before($(".home-header-container").clone().addClass("animateIt"));
+    $(window).on("scroll", function () {
+        $("body").toggleClass("down", ($(window).scrollTop() > 340));
+    });
+});
+
+ $(document).ready(function () {
+    $(window).scroll(function () {
+        $('.home-header-text').toggleClass("hide", ($(window).scrollTop() > 340)),
+        $('.home-header-li').toggleClass("color", ($(window).scrollTop() > 340)),
+        $('.home-header-nav').toggleClass("up", ($(window).scrollTop() > 340)),
+        $('.home-circle').toggleClass("move", ($(window).scrollTop() > 340)),
+        $('.home-circle-img').toggleClass("size", ($(window).scrollTop() > 340)),
+        $('.home-header-social-links').toggleClass("appear", ($(window).scrollTop() > 340));
+     }); 
+});
+
+
+

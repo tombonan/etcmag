@@ -1,17 +1,34 @@
 <% provide(:title, 'Home') %>
+<div class = "home-header-container">
+	<div class = "home-circle">
+		<a href="<%= root_path %>">
+		<%= image_tag(('e.png'), class: "home-circle-img") %>
+		</a>
+	</div>
+	<h1><%= link_to "Etcetera Magazine", root_path, class: "home-header-text" %></h1>
+	<ul class = "home-header-nav">
+		<li class = 'home-header-li'><%= link_to "About Us", about_path, class: cp(about_path) %></li>
+		<li class = 'home-header-li'><%= link_to "Blog", blogs_path, class: cp(blogs_path) %></li>
+		<li class = 'home-header-li'><%= link_to "Magazine", magazine_path, class: mag %></li>
+		<li class = 'home-header-li'><%= link_to "Previous Issues", issues_path, class: cp(issues_path) %></li>
+		<li class = 'home-header-li'><%= link_to "Contact", contact_path, class: cp(contact_path) %></li>
+	</ul>
+</div>
 
+<!-- end home header -->
 <div class = "home-container">
-	<div class = "feature-container">
-		<%=image_tag("feature-example.jpg") %>
-		<div class = "feature-tag">	
-			<h3 id = 'feature-text'></h3>
-		</div>
-		<div class = "feature-content-container">
-			<h3 id = "home-feature-title">Example Feature Title</h3>
-			<h5 id = "author-name">Author Name</h5>
-			<h4><i>Example feature subtitle goes here.</i></h4>
+	<div class = "home-feature-container">
+		<div class = "home-feature-overlay">
+			<%= image_tag(("placeholders/home-feature.jpg"), :class => "home-feature-image" )%>
+			<div class = "home-feature-text">
+				<h3>Issue Title</h3>
+				<div></div>
+				<h1>This Is a Placeholding Article Name</h1>
+			</div>
 		</div>
 	</div>
+
+	
 
 	<table class = "magazine-preview-container">
 		<tr>
