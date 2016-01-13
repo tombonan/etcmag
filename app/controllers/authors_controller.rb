@@ -1,6 +1,6 @@
 class AuthorsController < ApplicationController
 	def index
-		
+		@authors = Author.all.order('name ASC')
 	end
 
 	def new
@@ -22,6 +22,7 @@ class AuthorsController < ApplicationController
 	def show
 		@author = Author.friendly.find(params[:id])
 		@blogs = @author.blogs.order(created_at: :desc)
+		@articles = @author.articles.order(created_at: :desc)
 	end
 
 private

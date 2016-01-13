@@ -1,4 +1,46 @@
-<% for issue in @issues do %>
-	<%= link_to issue.name, issue_path(issue)%>
-	<%= image_tag issue.image_url(:thumb).to_s %>
+<% provide(:title, 'Issues') %>
+<div class = "issues-container">
+	<div class = "issues-list">
+		<div class = "issues-head">
+			<h1>EtcMag<span id ="red">Issues</span></h1>
+			<div id = "issues-line-thin"></div>
+			<div id = "issues-line-thick"></div>
+		</div>
+		<div class = "issue-table">
+			
+			<% for issue in @issues do %>
+					<div class = "issue-block">
+						<%= link_to(issue) do %>
+							<%= image_tag(issue.image_url(:thumb).to_s, :class => "issue-block-image") %>
+						
+						<h5 class = "issue-name"><%= issue.name%></h5>
+						<% end %>
+					</div>
+			<% end %>
+			</tr>
+			
+		</div>
+	</div>
+	<div class = "features-list">
+		<h1 class = "featured">Featured</h1>
+	</div>
+	
+</div>
+
+
+<% if false %>
+	<div class = "issue-block">
+				<%= image_tag issue.image_url(:thumb).to_s %>
+				<%= link_to issue.name, issue_path(issue), :class => "issue-name"%>
+
+			</div>
+
+
+			<tr>
+				<% for issue in @issues do %>
+					<td class = "issue-name">
+						<h5><%= link_to issue.name, issue_path(issue)%></h5>
+					</td>
+				<% end %>
+			</tr>
 <% end %>

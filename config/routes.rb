@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'about-the-site' => 'static_pages#about-the-site'
   get 'brand' => 'static_pages#brand'
   get 'contact' => 'static_pages#contact'
+  get 'login' => 'static_pages#login'
 
   #magazine routes
   resources :issues do 

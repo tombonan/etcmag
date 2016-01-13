@@ -5,17 +5,23 @@
 
 <%= form_for @blog, :html => {:multipart => true} do |b| %>
 	<p>
-		<%= b.label :title %>:<br>
+		Title<br>
 		<%= b.text_field :title %>
 	</p>
 	<p>
-		<%= b.file_field :image %>
+		<% if @blog.image? %>
+		
+		<% else %>
+		Upload Image<br>
+		<%= b.file_field :image, :class => "upload-button" %>
+		<% end %>
 	</p>
 	<p>
+		Add an Author<br>
 		<%= collection_select( :blog, :author_id, Author.all.order('name ASC'), :id, :name, {}, { :multiple => false}) %>
 	</p>
 	<p>
-		<%= b.label :body %>:<br>
+		Body<br>
 		<%= b.text_area :body, :class => 'ckeditor'%>
 	</p>
 	<p>

@@ -2,31 +2,13 @@
 	<%= image_tag('bucknell-footer.png') %>
 	<div class = "footer-text-wrapper">
 		<div class = "footer-text-container">
-			<div class = "footer-text-left">
-				<div class = "footer-social">
-					<span class = "footer-icon"><%= image_tag('footer-fb.png') %></span>
-					<span class = "footer-icon"><%= image_tag('footer-inst.png') %></span>
-				</div>
-				<div class = "footer-contact">
-					<h3 id = "foot-title" class = "footer-contact"><span class = "footer-mail"><%= image_tag('footer-mail.png') %></span>Contact Us</h3>
-				</div>
-			</div>
-			<div class = "footer-text-right">
-				<ul class = "static-pages-ul">
-					<li id = "foot-title">Resources</li>
-					<li><%= link_to "Home", root_path %></li>
-					<li><%= link_to "About the Magazine", about_path %></li>
-					<li><%= link_to "About the Website", about_the_site_path %></li>
-					<li>The Etcetera Team</li>
-				</ul>
-				<ul class = "magazine-pages-ul">
-					<li id = "foot-title">The Magazine</li>
-					<li><%= link_to "Current Issue", magazine_path %></li>
-					<li><%= link_to "All Issues", issues_path %></li>
-					<li><%= link_to "EtcMag Blog", blogs_path %></li>
-					<li><%= link_to "Contributors", authors_path%></li>
-				</ul>
-			</div>
+			<ul class = "footer-nav-top">
+				<li><%= link_to "Home Page", root_path, :class => "footer-root" %></li>
+				<li><%= link_to "About Us", about_path %></li>
+				<li><%= link_to "EtcMag Blog", blogs_path %></li>
+				<li><%= link_to "The Magazine", magazine_path %></li>
+				<li><%= link_to "Contact Us", contact_path %></li>
+			</ul>
 		</div><!-- footer-text-contianer -->
 		<ul class = "copyright-footer">
 				<li id = "copyright"><i class="fa fa-copyright"></i>2015 Etcetera Magazine, Bucknell University</li>

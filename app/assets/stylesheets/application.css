@@ -54,6 +54,12 @@ a {
 	color: inherit;
 }
 
+.content-wrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
 /* -- flash css -- */
 #flash {
   width: 40%;
@@ -189,6 +195,7 @@ body.down .header-container.animateIt {
   font-size: 1.2em;
   padding-top: 20px;
   padding-bottom: 20px;
+  letter-spacing: 1px;
 }
 
 .blog-form-container label {
@@ -206,15 +213,8 @@ body.down .header-container.animateIt {
 .blog-form-container textarea {width:600px;}
 .blog-form-container button {margin-left:156px;}
 
-.blog-form-container input, .blog-form-container textarea { 
-    border:1px solid #aaa;
-    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
-    border-radius:2px;
-}
 .blog-form-container input:focus, .blog-form-container textarea:focus {
-    background: #fff; 
-    border:1px solid #916A70;
-    box-shadow: 0 0 3px #aaa; 
+    outline: none;
 }
 
 #validation-error-message {
@@ -232,6 +232,27 @@ body.down .header-container.animateIt {
   margin-bottom: 20px;
 }
 
+/* -- magazine header css -- */
+.magazine-nav {
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+}
+
+.magazine-nav ul {
+  width: 80%;
+  height: 50px;
+  list-style-type: none;
+   margin: 0 auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.magazine-nav ul li {
+  line-height: 50px;
+}
 
 
 /* -- footer css -- */
@@ -253,97 +274,30 @@ body.down .header-container.animateIt {
 
 .footer-text-container {
   width: 80%;
-  height: 240px;
+  height: 160px;
   margin: 20px auto;
   border-bottom: 1px solid #bebebe;
 }
 
-.footer-text-left {
-  float: left;
-  width: 50%;
-  height: 180px;
-}
-
-.footer-text-right {
-  float: right;
-  width: 50%;
-  height: 180px;
-}
-
-.footer-text-right ul {
+.footer-nav-top {
+  padding-top: 30px;
+   width: 80%;
   list-style-type: none;
-  font-family: 'Raleway', sans-serif;
-  color: #444;
+   margin: 0 auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.footer-nav-top li {
+  display: inline-block;
+  margin-left: 32px;
+  margin-right: 32px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  color: #747474;
   font-size: 1em;
-}
-
-.footer-text-right ul li a:hover {
-  text-decoration: underline;
-}
-
-#foot-title {
-  font-family: 'Raleway', sans-serif;
-  font-size: 1.2em;
-  color: #2c3e50;
-  letter-spacing: 1px;
-}
-
-.footer-social {
-  margin-left: 10%;
-  width: 20%;
-  float: left;
-}
-
-
-.footer-contact {
-  margin-left: 10%;
-  width: 60%;
-  float: left;
-}
-
-.footer-icon {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  text-indent: 105%;
-  white-space: nowrap;
-  width: 32px;
-  height: 32px;
-  margin-left: 5px;
-  margin-right: 5px;
-  vertical-align: middle;
-}
-
-.footer-mail {
-  display: inline-block;
-  position: relative;
-  height: 24px;
-  width: 24px;
-  text-indent: 105%;
-  white-space: nowrap;
-  margin-left: 5px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
-.footer-contact {
-  display: inline-block;
-  line-height: 24px;
-}
-
-.magazine-pages-ul {
-  width: 40%;
-  float: right;
-}
-
-.static-pages-ul {
-  width: 40%;
-  float: left;
-}
-
-.static-pages-ul li, .magazine-pages-ul li {
-  padding-top: 7px;
-  padding-bottom: 7px;
+  letter-spacing: 0.1em;
 }
 
 .copyright-footer {
@@ -430,7 +384,6 @@ body.down .header-container.animateIt {
 
 .signup-container input:focus {
     outline: 0;
-    box-shadow:inset 0 0 0px 1px #d6d6d6;
 }
 
 .signup-container input[type=submit] {

@@ -1,1 +1,17 @@
 <% provide(:title, 'Contributors') %>
+
+<div class = "author-index-container">
+	<div class = "author-index-title">
+		<h1>EtcMag<span id = "red">Contributors</span></h1>
+		<div id = "line-thin"></div>
+		<div id = "line-thick"></div>
+	</div>
+
+	<div class = "author-list">
+		<ul class = "list-one">
+			<% for author in @authors do %>
+				<li><%= link_to author.name, author_path(author) %></li>
+			<% end %>
+		</ul>
+	</div>
+</div>

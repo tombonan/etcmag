@@ -12,13 +12,13 @@
 </head>
 <body>
 <%= render partial: 'layouts/header' unless @disable_nav %>
-<% if flash[:notice] %>
-	<p id="flash"><%= flash.notice %></p>
-<% end %>
-
-<%= yield %>
-
-<%= render partial: 'layouts/footer' %>
+<div class = "content-wrapper">
+	<% if flash[:notice] %>
+		<p id="flash"><%= flash.notice %></p>
+	<% end %>
+	<%= yield %>
+</div>
+<%= render partial: 'layouts/footer' unless @disable_foot %>
 
 </body>
 </html>

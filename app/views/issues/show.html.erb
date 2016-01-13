@@ -1,4 +1,7 @@
-<%= render partial: 'issuesheader' %>
+<% provide(:title, "#{@issue.name}") %>
+<% if false %><%= render partial: 'issuesheader' %> <% end %>
+
+
 <% for article in @articles do %>
 	<h1><%=link_to article.title, issue_article_path(@issue, article) %></h1>
 	<h5><%=link_to article.author.name, author_path(article.author) %></h5>
