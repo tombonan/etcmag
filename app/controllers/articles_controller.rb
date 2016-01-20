@@ -18,6 +18,7 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = Article.friendly.find(params[:id])
+		@disable_nav = true
 	end
 
 	def edit
@@ -28,7 +29,7 @@ class ArticlesController < ApplicationController
 		@article = Article.friendly.find(params[:id])
 		if @article.update_attributes(article_params)
 			flash.notice = "'#{@article.title}' Updated!"
-			redirect_to @article
+			redirect_to issue_article_path(@issue, @article)
 		else
 			render 'edit'
 		end
@@ -40,7 +41,7 @@ class ArticlesController < ApplicationController
 	private
 
 	def article_params
-		params.require(:article).permit(:title, :author_id, :body)
+		params.require(:article).permit(:title, :author_id, :body, :image)
 	end
 
 	def load_issue

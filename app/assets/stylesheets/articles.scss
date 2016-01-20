@@ -1,3 +1,72 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.article-show-image {
+	width: 100%;
+	height: 440px;
+	position: relative;
+	z-index: 5;
+	overflow: hidden; 
+}
+
+.article-show-overlay:after {
+ content: " ";
+  z-index: 10;
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: -moz-linear-gradient(top,  rgba(40,40,40,0.7) 0%, rgba(20,20,20,0.6) 25%, rgba(20,20,20,0.3) 100%);
+background: -webkit-linear-gradient(top,  rgba(40,40,40,0.7) 0%,rgba(20,20,20,0.6) 25%,rgba(20,20,20,0.3) 100%);
+background: linear-gradient(to bottom,  rgba(40,40,40,0.7) 0%,rgba(20,20,20,0.6) 25%,rgba(20,20,20,0.3) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', endColorstr='#4d141414',GradientType=0 );
+}
+
+.article-show-overlay img {
+	width: 100%;
+	position: absolute;
+	vertical-align: center;
+	top: -60%;
+}
+
+.article-show-head {
+	z-index: 50;
+	text-align: center;
+}
+
+.article-show-head a:hover {
+	text-decoration: underline;
+}
+
+.article-show-head h3 {
+	font-family: 'Raleway';
+	font-weight: 200;
+	font-size: 1em;
+	margin-top: 10px;
+  	margin-bottom: 10px;
+  	letter-spacing: 0.05em;
+	color: #6f6f6f;
+}
+
+.article-show-head h1 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	color: #444;
+	font-size: 2.4em;
+}
+
+.article-show-text {
+	line-height: 1.6;
+	font-size: 18px;
+	width: 50%;
+	margin: 80px auto;
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	color: #444;
+	padding-bottom: 50px;
+	border-bottom: 1px solid #bebebe;
+}

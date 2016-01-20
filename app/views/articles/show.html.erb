@@ -1,0 +1,20 @@
+<% provide(:title, "#{@article.title}") %>
+<%= render partial: 'layouts/imageheader' %>
+<div class = "article-show-image">
+	<div class = "article-show-overlay">
+		<%=image_tag(@article.image_url.to_s) %>
+	</div>
+</div>
+
+<div class = "article-show-head">
+	<h3><%=link_to @article.issue.name, @article.issue %></h3>
+	<h1><%= @article.title %></h1>
+	<h3><span id = "author-name"><%= link_to @article.author.name, @article.author %></span></h3>
+</div>
+
+<div class = "article-show-text">
+		<p><%=@article.body.html_safe %></p>
+</div>
+
+
+

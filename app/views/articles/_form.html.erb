@@ -8,6 +8,14 @@
 		<%= collection_select( :article, :author_id, Author.all.order('name ASC'), :id, :name, {}, { :multiple => false}) %>
 	</p>
 	<p>
+		<% if @article.image? %>
+		
+		<% else %>
+		Upload Image<br>
+		<%= a.file_field :image, :class => "upload-button" %>
+		<% end %>
+	</p>
+	<p>
 		<%= a.label :body %>:<br>
 		<%= a.text_area :body, :class => 'ckeditor'%>
 	</p>

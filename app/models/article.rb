@@ -5,4 +5,6 @@ class Article < ActiveRecord::Base
 	belongs_to :issue
 	belongs_to :author
 
+	mount_uploader :image, ArticleimageUploader
+
 end

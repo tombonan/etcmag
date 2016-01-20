@@ -1,0 +1,23 @@
+<div class = "home-header-container">
+	<div class = "home-circle">
+		<a href="<%= root_path %>">
+		<%= image_tag(('e.png'), class: "home-circle-img") %>
+		</a>
+	</div>
+	<div class = "home-header-text">
+		<h1><%= link_to "Etcetera Magazine", root_path %></h1>
+	</div>
+	<div class = "home-head-nav-block">
+		<ul class = "home-header-nav">
+			<li class = 'home-header-li'><%= link_to "About Us", about_path, class: cp(about_path) %></li>
+			<li class = 'home-header-li'><%= link_to "Blog", blogs_path, class: cp(blogs_path) %></li>
+			<li class = 'home-header-li'><%= link_to "Magazine", magazine_path, class: mag %></li>
+			<li class = 'home-header-li'><%= link_to "Previous Issues", issues_path, class: cp(issues_path) %></li>
+			<li class = 'home-header-li'><%= link_to "Our Contributors", authors_path, class: cp(authors_path) %></li>
+			<li class = 'home-header-li'><%= link_to "Contact", contact_path, class: cp(contact_path) %></li>
+		</ul>
+	</div>
+</div>
+
+<!-- end home header -->
+<div class = "home-container">
