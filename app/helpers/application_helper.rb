@@ -1,4 +1,5 @@
 module ApplicationHelper
+
 	def full_title(page_title = '')
     	base_title = "EtcMag"
 	    if page_title.empty?
@@ -17,4 +18,5 @@ module ApplicationHelper
 			"active-nav" if current_page?(Issue.last)
 		end
 	end
+
 end

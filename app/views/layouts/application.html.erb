@@ -11,7 +11,12 @@
    <%= favicon_link_tag 'favicon.png' %>
 </head>
 <body>
-<%= render partial: 'layouts/header' unless @disable_nav %>
+  <%= render partial: 'layouts/header' unless @disable_nav %>
+
+<% if current_user %>
+  <%= render partial: 'layouts/admin' %>
+<% end %>
+
 <div class = "content-wrapper">
 	<% if flash[:notice] %>
 		<p id="flash"><%= flash.notice %></p>

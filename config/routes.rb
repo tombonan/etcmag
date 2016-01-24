@@ -14,7 +14,10 @@ Rails.application.routes.draw do
   get 'about-the-site' => 'static_pages#about-the-site'
   get 'brand' => 'static_pages#brand'
   get 'contact' => 'static_pages#contact'
-  get 'login' => 'static_pages#login'
+  get 'login' => 'sessions#new'
+  get 'login' => 'sessions#new'
+  get 'logout' => 'sessions#destroy'
+
 
   #magazine routes
   resources :issues do 
@@ -27,6 +30,8 @@ Rails.application.routes.draw do
   #author routes
   scope do
      resources :authors, path: 'contributors'
+     resources :staffs, path: 'staff'
+     resources :sessions
   end
  
 
