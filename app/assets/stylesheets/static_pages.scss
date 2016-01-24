@@ -285,37 +285,115 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 */
 
 /* -- magazine preview css -- */
-
 .magazine-preview-container {
 	width: 100%;
 	margin-top: 50px;
 }
 
-.magazine-preview-img, .magazine-preview-text {
+.article-block {
 	width: 28%;
-	padding-left: 2%;
-	padding-right: 2%;
+	height: 283px;
+	padding-left: 1.95%;
+	padding-right: 1.95%;
 	display: inline-block;
 }
-.magazine-preview-img:first-child, .magazine-preview-text:first-child {
+
+.article-block:first-child {
 	margin-left: 2%;
 }
 
-.magazine-preview-img img {
+.article-block img {
 	width: 100%;
+	height: 100%;
 }
 
-.magazine-preview-text {
+.article-preview-text {
 	text-align: center;
 	margin-top: 10px;
 }
 
-.magazine-preview-text h3 {
+.article-preview-text h3 {
 	font-family: 'Playfair Display', serif;
 	font-weight: 400;
 	font-size: 1.4em;
+	color: #444;
 	letter-spacing: 1px;
 }
+
+.article-preview-text a:hover {
+	text-decoration: underline;
+}
+
+/* -- current issue preview -- */
+
+#thin-line-home {
+	margin: 80px auto;
+	width: 922px;
+	background-color: #916A70; 
+	height: 1px;
+	margin-bottom: 1px;
+}
+
+.current-magazine-container {
+	margin: 0 auto;
+	width: 922px;
+	height: 360px;
+	background-color: #f6f6f6;
+	border-top: 2px solid #916A70; 
+}
+
+.fake-mag-cover {
+	width: 208px;
+	height: 260px;
+	float: left;
+	margin: 40px 0px 0px 100px;
+}
+
+.fake-mag-cover img {
+	height: 100%;
+	width: 100%;
+}
+
+.current-magazine-content {
+	margin: 30px 0px 0px 70px;
+	float: left;
+}
+
+.current-magazine-content h3 {
+	width: 170%;
+	border-bottom: 1px dotted #444;
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	color: #444;
+	font-size: 1.8em;
+	letter-spacing: 1px;
+}
+
+.articles-list {
+	list-style-type: none;
+	margin: 10px 0px 0px 0px;
+}
+
+.articles-list a:hover {
+	text-decoration: underline;
+}
+
+.articles-list li {
+	padding-top: 4px;
+	padding-bottom: 4px;
+	color: #444;
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+}
+
+#author-name {
+	font-family: 'Vollkorn', serif;
+	font-size: 0.9em;
+	color: #745459;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
 
 
 
@@ -531,69 +609,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 	font-size: 14px;
 	line-height: 1.6;
 }
-
-#thin-line-home {
-	margin: 80px auto;
-	width: 64%;
-	background-color: #916A70; 
-	height: 1px;
-	margin-bottom: 1px;
-}
-
-.current-magazine-container {
-	margin: 0 auto;
-	width: 64%;
-	height: 360px;
-	background-color: #f6f6f6;
-	border-top: 2px solid #916A70; 
-}
-
-.fake-mag-cover {
-	width: 208px;
-	height: 260px;
-	background-image: url(image_path('etc-cover.jpg'));
-	float: left;
-	margin: 40px 0px 0px 100px;
-}
-
-.current-magazine-content {
-	margin: 30px 0px 0px 70px;
-	float: left;
-}
-
-.current-magazine-content h3 {
-	width: 170%;
-	border-bottom: 1px dotted #444;
-	font-family: 'Playfair Display', serif;
-	font-weight: 400;
-	color: #444;
-	font-size: 1.8em;
-	letter-spacing: 1px;
-}
-
-.articles-list {
-	list-style-type: none;
-	margin: 10px 0px 0px 0px;
-}
-
-.articles-list li {
-	padding-top: 4px;
-	padding-bottom: 4px;
-	color: #444;
-	font-family: 'Playfair Display', serif;
-	font-weight: 400;
-}
-
-#author-name {
-	font-family: 'Vollkorn', serif;
-	font-size: 0.9em;
-	color: #745459;
-	text-transform: uppercase;
-	letter-spacing: -1px;
-}
-
-
-
 
 
 /* -- about-the-magazine css -- */

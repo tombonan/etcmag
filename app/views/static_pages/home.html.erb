@@ -10,49 +10,34 @@
 			</div>
 		</div>
 	</div>
-
 	
-
-	<table class = "magazine-preview-container">
-		<tr>
-			<th class = "magazine-preview-img">
-				<%= image_tag("nyc.jpg") %>
-			</th>
-			<th class = "magazine-preview-img">
-				<%= image_tag("books.jpg") %>
-			</th>
-			<th class = "magazine-preview-img">
-				<%= image_tag("mag.jpg") %>
-			</th>
-		</tr>
-		<tr>
-			<td class = "magazine-preview-text" >
-				<h5 id = "author-name">Author Name</h5>
-				<h3>Lorem ipsum dolor sit amet</h3>
-			</td>
-			<td class = "magazine-preview-text" >
-				<h5 id = "author-name">Author Name</h5>
-				<h3>Consectetur adipiscing elit</h3>
-			</td>
-			<td class = "magazine-preview-text" >
-				<h5 id = "author-name">Author Name</h5>
-				<h3>Donec felis dolor, euismod non</h3>
-			</td>
-		</tr>
-	</table>
+	<div class = "magazine-preview-container">
+		<% for article in @articles do %>
+		<div class = "article-block">
+			<%= link_to issue_article_path(article.issue, article) do %>
+				<%= image_tag(article.image_url.to_s) %>
+			<% end %>
+			<div class = "article-preview-text">
+				<h5 id = "author-name"><%= link_to article.author.name, author_path(article.author) %></h5>
+				<h3><%= link_to article.title, issue_article_path(article.issue, article) %></h3>
+			</div>
+		</div> <!-- article-block -->
+		<% end %>
+	</div>
 
 	<div id = "thin-line-home"></div>
 	<div class = "current-magazine-container">
-		<div class = "fake-mag-cover"></div>
+		<div class = "fake-mag-cover">
+			<%= link_to @issue do %>
+				<%= image_tag(@issue.image_url.to_s) %>
+			<% end %>
+		</div>
 		<div class = "current-magazine-content">
-			<h3><%= link_to "Current Issue Title", magazine_path %></h3>
+			<h3><%= link_to @issue.name, issue_path(@issue)%></h3>
 			<ul class = "articles-list">
-				<li>First Article &#8212; <span id = "author-name">Author Name</span></li>
-				<li>Second Article &#8212; <span id = "author-name">Author Name</span></li>
-				<li>Third Article &#8212; <span id = "author-name">Author Name</span></li>
-				<li>Fourth Article &#8212; <span id = "author-name">Author Name</span></li>
-				<li>Fifth Article &#8212; <span id = "author-name">Author Name</span></li>
-				<li>Sixth Article &#8212; <span id = "author-name">Author Name</span></li>
+				<% for article in @latestarticles do %>
+					<li><%= link_to article.title, issue_article_path(article.issue, article) %> &#8212; <span id = "author-name"><%= link_to article.author.name, author_path(article.author) %></span></li>
+				<% end %>
 			</ul>
 		</div>
 	</div>
