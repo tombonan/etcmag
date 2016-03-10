@@ -95,3 +95,87 @@
   	letter-spacing: 0.05em;
   	color: #444;
 }
+
+/* -- issue show css -- */
+.issue-show-head {
+	width: 990px;
+	margin: 20px auto;
+}
+
+.issue-show-head h1 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+  	font-size: 2.6em;
+  	color: #444;
+}
+
+.issue-article-index {
+	margin: 0 auto;
+	width: 860px;
+}
+
+.issue-article-head-text {
+	display: inline-block;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.1em;
+	color: #7a595e;
+	margin-bottom: 30px;
+}
+
+.issue-article-divider {
+	display: inline-block;
+	height: 1px;
+	width: 780px;
+	vertical-align: middle;
+	background-color: #ccc;
+}
+
+.issue-article-block {
+	margin-bottom: 30px;
+}
+
+.issue-index-image {
+	width: 380px;
+	height: 260px;
+	display: inline-block;
+}
+
+.issue-index-image img {
+	width: 100%;
+	height: 100%;
+}
+
+.issue-index-text {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 40px;
+	width: 380px;
+}
+
+.issue-index-text a:hover {
+	text-decoration: underline;
+}
+
+#issue-article-title {
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+  	font-size: 1.6em;
+  	color: #444;
+}
+
+#issue-article-author {
+	font-family: 'Crimson Text', serif;
+	text-transform: uppercase;
+	color: #7a595e;
+	margin-bottom: 12px;
+}
+
+.issue-index-text p {
+	font-family: 'Crimson Text', serif;
+	color: #444;
+	line-height: 1.2;
+}
+
+
+
+

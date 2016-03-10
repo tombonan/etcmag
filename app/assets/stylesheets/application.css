@@ -18,6 +18,7 @@
 /* 
 font-family: 'Playfair Display', serif; 
 font-family: 'Raleway', sans-serif;
+font-family: 'Crimson Text', serif;
 */
 
 body {    
@@ -258,7 +259,7 @@ body.down .header-container.animateIt {
 /* -- footer css -- */
 .footer-container {
   width: 100%;
-  background-color: #464e4e;
+  background-color: #55565A;
 }
 
 .footer-background {
@@ -305,17 +306,17 @@ body.down .header-container.animateIt {
 .copyright-footer {
   width: 100%;
   list-style-type: none;
-  background-color: #434a4a;
+  background-color: #4b4c50;
   height: 30px;
   padding: 0;
 }
 
 .copyright-footer li {
   display: inline-block;
-  font-family: 'Vollkorn', serif;
+  font-family: 'Crimson Text', serif;
   font-size: 12px;
   line-height: 30px;
-  color: #7d8484;
+  color: #8f9095;
 }
 
 .copyright-footer li:first-child {
@@ -374,7 +375,7 @@ body.down .header-container.animateIt {
 
 .signup-container p {
     margin-top: 2px;
-    font-family: 'Vollkorn', serif;
+    font-family: 'Crimson Text', serif;
     color: #7c7c7c;
     font-size: 14px;
 }

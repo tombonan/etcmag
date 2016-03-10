@@ -1,8 +1,35 @@
 <% provide(:title, "#{@issue.name}") %>
 <% if false %><%= render partial: 'issuesheader' %> <% end %>
 
+<div class = "issue-show-head">
+	<h1><%= @issue.name %></h1>
+	<div id = "issues-line-thin"></div>
+	<div id = "issues-line-thick"></div>
+	
+</div>
 
-<% for article in @articles do %>
-	<h1><%=link_to article.title, issue_article_path(@issue, article) %></h1>
-	<h5><%=link_to article.author.name, author_path(article.author) %></h5>
-<% end %>
+<div class = "issue-article-index">
+	<h5 class = "issue-article-head-text">Articles</h5>
+	<div class = "issue-article-divider"></div>
+		<% for article in @articles do %>
+		<div class = "issue-article-block">
+			<div class = "issue-index-image">
+				<%= link_to issue_article_path(@issue, article) do %>
+					<%= image_tag(article.image_url.to_s) %>
+				<% end %>
+			</div>
+			<div class = "issue-index-text">
+				<h1 id = "issue-article-title"><%=link_to article.title, issue_article_path(@issue, article) %></h1>
+				<h5 id = "issue-article-author">By <%=link_to article.author.name, author_path(article.author) %></h5>
+				<p id = "issue-article-teaser">
+					<%= truncate(article.body.html_safe, length: 180, separator: ' ', :escape => false) %>
+				</p>
+			</div>	
+		</div>
+		<% end %>
+</div> <!-- issue article index -->
+
+<div class = "issue-article-index">
+	<h5 class = "issue-article-head-text">Galleries</h5>
+	<div class = "issue-article-divider"></div>
+</div>

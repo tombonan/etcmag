@@ -4,9 +4,13 @@
 		<%= i.label :name %>:<br>
 		<%= i.text_field :name %>
 	</p>
+	<% if @issue.image? %>
+		
+	<% else %>
 	<p>
 		<%= i.file_field :image %>
 	</p>
+	<% end %>
 	<p>
 		<%= i.submit "Update"%>
 	</p>

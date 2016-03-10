@@ -10,7 +10,9 @@
 	<div class = "home-head-nav-block">
 		<ul class = "home-header-nav">
 			<li class = 'home-header-li'><%= link_to "About Us", about_path, class: cp(about_path) %></li>
-			<li class = 'home-header-li'><%= link_to "Blog", blogs_path, class: cp(blogs_path) %></li>
+			<% if false %>
+				<li class = 'home-header-li'><%= link_to "Blog", blogs_path, class: cp(blogs_path) %></li>
+			<% end %>
 			<li class = 'home-header-li'><%= link_to "Magazine", magazine_path, class: mag %></li>
 			<li class = 'home-header-li'><%= link_to "Previous Issues", issues_path, class: cp(issues_path) %></li>
 			<li class = 'home-header-li'><%= link_to "Our Contributors", authors_path, class: cp(authors_path) %></li>
