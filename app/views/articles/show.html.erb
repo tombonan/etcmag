@@ -2,7 +2,7 @@
 <%= render partial: 'layouts/imageheader' %>
 <div class = "article-show-image">
 	<div class = "article-show-overlay">
-		<%=image_tag(@article.image_url.to_s)%>
+		<%=image_tag(@article.article_attachments.first.avatar_url.to_s)%>
 	</div>
 </div>
 

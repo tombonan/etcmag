@@ -15,7 +15,7 @@
 		<div class = "issue-article-block">
 			<div class = "issue-index-image">
 				<%= link_to issue_article_path(@issue, article) do %>
-					<%= image_tag(article.image_url.to_s) %>
+					<%= image_tag(article.article_attachments.first.avatar_url.to_s) %>
 				<% end %>
 			</div>
 			<div class = "issue-index-text">
