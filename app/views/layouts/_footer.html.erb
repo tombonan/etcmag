@@ -1,13 +1,22 @@
 <div class = "footer-container">
 		<div class = "footer-text-container">
+			<div class = "footer-logo">
+				
+			</div>
+
+			<div class = "footer-line">
+					
+			</div>
+
 			<ul class = "footer-nav-top">
-				<li><%= link_to "Home Page", root_path, :class => "footer-root" %></li>
+				<li id= "footer-title">The Magazine</li>
+				<li><%= link_to "Home Page", root_path%></li>
 				<li><%= link_to "About Us", about_path %></li>
-				<li><%= link_to "The Magazine", magazine_path %></li>
-				<li><%= link_to "Contact Us", contact_path %></li>
+				<li><%= link_to "Current Issue", magazine_path %></li>
+				<li><%= link_to "Contact", contact_path %></li>
 			</ul>
 		</div><!-- footer-text-contianer -->
-		<ul class = "copyright-footer">
+				<ul class = "copyright-footer">
 				<li id = "copyright"><i class="fa fa-copyright"></i>2016 Etcetera Magazine, Bucknell University</li>
 				<li id = "site-design">Site designed by <a href="http://www.tombonan.com" target = "_blank" id = "tom-link">Tom Bonan</a></li>
 			</ul>

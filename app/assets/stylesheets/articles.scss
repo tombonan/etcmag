@@ -2,9 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .article-show-image {
 	width: 100%;
-	height: 440px;
+	height: 100vh;
 	position: relative;
 	z-index: 5;
 	overflow: hidden; 
@@ -27,14 +28,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 
 .article-show-overlay img {
 	width: 100%;
-	position: absolute;
-	vertical-align: center;
-	top: -60%;
+	height: 100vh;
+}
+
+.article-show-head-container {
+	z-index: 50;
+	width: 100%;
+	height: 220px;
+	background-color: #f0f0f0;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .article-show-head {
-	z-index: 50;
-	text-align: center;
+	padding-left: 80px;
+	padding-right: 60px;
+	display: inline-block;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	float: left;
 }
 
 .article-show-head a:hover {
@@ -42,32 +55,70 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 }
 
 .article-show-head h3 {
-	font-family: 'Raleway';
-	font-weight: 200;
-	font-size: 1em;
-	margin-top: 10px;
-  	margin-bottom: 10px;
+	font-family: 'Crimson Text', serif;
+	font-weight: 400;
+	text-transform: uppercase;
   	letter-spacing: 0.05em;
-	color: #6f6f6f;
+	color: #404040;
+	font-size: 0.8em;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
-.article-show-head h1 {
+#article-show-issue {
+	font-family: 'Raleway';
+	font-weight: 400;
+	text-transform: none;
+	color: #616263;
+}
+
+#article-show-date {
 	font-family: 'Playfair Display', serif;
 	font-weight: 400;
-	letter-spacing: 0.1em;
 	color: #444;
-	font-size: 2.4em;
+}
+
+.article-show-divider {
+	display: inline-block;
+	width: 4px;
+	background-color: #BEBEBE;
+	height: 180px;
+	float: left;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+.article-show-title {
+	padding-left: 70px;
+	float: left;
+	display: inline-block;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+.article-show-title h1 {
+	font-family: 'Feena Casual';
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	font-size: 2.8em;
+	color: #404040;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
 }
 
 .article-show-text {
 	line-height: 1.6;
 	font-size: 18px;
 	width: 620px;
-	margin-top: 80px;
+	margin-top: 60px;
 	margin-left: 20%;
 	font-family: 'Crimson Text', serif;
 	font-weight: 400;
 	color: #444;
-	padding-bottom: 50px;
+	padding-bottom: 20px;
 	border-bottom: 1px solid #bebebe;
+	margin-bottom: 100px;
 }

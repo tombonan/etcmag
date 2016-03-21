@@ -2,14 +2,23 @@
 <%= render partial: 'layouts/imageheader' %>
 <div class = "article-show-image">
 	<div class = "article-show-overlay">
-		<%=image_tag(@article.image_url.to_s) %>
+		<%=image_tag(@article.image_url.to_s)%>
 	</div>
 </div>
 
-<div class = "article-show-head">
-	<h3><%=link_to @article.issue.name, @article.issue %></h3>
-	<h1><%= @article.title %></h1>
-	<h3><span id = "author-name"><%= link_to @article.author.name, @article.author %></span></h3>
+<div class = "article-show-head-container">
+	<div class = "article-show-head">
+		<h3 id = "article-show-issue"><%=link_to @article.issue.name, @article.issue %> <span id = "article-show-date"> | <%= @article.issue.created_at.strftime("%d %B %Y")%></span></h3>
+		<h3>By <%= link_to @article.author.name, @article.author %></h3>
+	</div>
+	
+	<div class = "article-show-divider">
+		
+	</div>
+
+	<div class = "article-show-title">
+		<h1><%= @article.title %></h1>
+	</div>
 </div>
 
 <div class = "article-show-text">

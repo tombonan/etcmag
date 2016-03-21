@@ -10,7 +10,10 @@
 		<%= image_tag(('e.png'), class: "circle-img") %>
 		</a>
 	</div>
-	<h1><%= link_to "Etcetera Magazine", root_path, class: "header-text" %></h1>
+	<div class = "header-logo">
+			<h1><%= link_to "Etcetera", root_path %></h1>
+			<h3><%= link_to "Magazine", root_path %></h3>
+	</div>
 	<ul class = "header-nav">
 		<li><p><%= link_to "About Us", about_path, class: cp(about_path) %></p></li>
 		<% if false %><li><p><%= link_to "Blog", blogs_path, class: cp(blogs_path) %></p></li><% end %>

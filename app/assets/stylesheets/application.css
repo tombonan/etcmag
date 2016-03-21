@@ -80,11 +80,11 @@ a {
 /* -- header css -- */
 .header-container {
   width: 100%;
-  background-color: #e1f1fc;
-background-image: url("http://www.transparenttextures.com/patterns/cream-pixels.png");
+  /* background-color: #e1f1fc; */
+  border-bottom: 1px solid #bebebe;
   margin: 0 auto;
   text-align: center;
-  height: 160px;
+  height: 120px;
   padding-top: 16px;
 }
 
@@ -101,26 +101,88 @@ background-image: url("http://www.transparenttextures.com/patterns/cream-pixels.
 .circle:hover {
   background-color: #2c3e50;
 }
+
+.header-logo {
+  width: 400px;
+  display: inline-block;
+  float: left;
+}
+
+.header-logo h1 {
+  margin-top: 20px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 3.1em;
+  letter-spacing: 2px;
+  line-height: 40px;
+  color: #444;
+}
+
+.header-logo h3 {
+  margin-top: 5px;
+  font-family: 'Raleway';
+  font-size: 0.9em;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: right;
+  padding-right: 116px;
+  color: #7f4946;
+}
+
+.header-nav {
+  width: 800px;
+  margin: 0 auto;
+  list-style-type: none;
+  display: inline-block;
+  float: right;
+  position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+  /* 
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  */
+}
+
+.header-nav li {
+  display: inline-block;
+  text-align: center;
+  margin-left: 25px;
+  margin-right: 25px;
+  font-family: 'Raleway', sans-serif;
+  color: #444;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.2s
+}
+
+.header-nav li:hover {
+  color: #7f4946;
+}
+
 /* -- header slide down upon scroll -- */
 .header-container.animateIt {
     position:fixed;
+    border-bottom: none;
     top:-220px;
     left: 0;
     right: 0;
     z-index:999;
     transition:0.3s top cubic-bezier(.3, .73, .3, .74);
-
+    background-color: #fff; 
     height: 40px;
     padding-top: 0px;
     box-shadow:         0px 3px 12px 0px rgba(50, 50, 50, 0.25);
 }
 
-.header-text.hide {
+.header-text.hide, .header-logo.hide {
   display: none;
 }
 
 .header-nav.up {
-  margin-top: 10px;
+  margin-top: 4px;
 }
 
 .circle.move {
@@ -141,46 +203,10 @@ body.down .header-container.animateIt {
     top:0;
 }
 
-
-
-.header-container h1 {
-	font-family: 'Playfair Display', serif;
-	font-weight: 700;
-  font-size: 3.4em;
-  color: #444;
-  margin-top: 10px;
-}
-
-.header-nav {
-  width: 80%;
-   margin: 30px auto;
-   list-style-type: none;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.header-nav li {
-  display: inline-block;
-  text-align: center;
-  margin-left: 25px;
-  margin-right: 25px;
-  font-family: 'Raleway', sans-serif;
-  color: #444;
-  font-size: 0.8em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: color 0.2s
-}
-
-.header-nav li:hover {
-  color: #916A70;
-}
-
 /* highlight if current page */
 
 .active-nav{
-  color: #916A70;
+  color: #7f4946;
   border-bottom: 1px dotted #916A70;
 }
 
@@ -262,27 +288,53 @@ body.down .header-container.animateIt {
   background-color: #55565A;
 }
 
-.footer-background {
-    background-size: cover;
-    background-color: #555e5e;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background: url(image_path('footer-bg.jpg')); 
-    color: #ccc;
-    min-height: 253px;
-}
-
 .footer-text-container {
-  width: 80%;
+  width: 86%;
   height: 160px;
   margin: 20px auto;
 }
 
+.footer-logo {
+  position: relative;
+  margin-left: -20px;
+  top: 54%;
+  transform: translateY(-50%);
+  float: left;
+  display: inline-block;
+  background-size: cover;
+  width: 160px;
+  height: 100px;
+  background-image: url('/assets/footer-logo.png');
+  background-repeat: no-repeat;
+}
+
+.footer-line {
+  float: left;
+  position: relative;
+  top: 56%;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 208px;
+  height: 1px;
+  background-color: #fff;
+  transform: rotate(-60deg);
+}
+
 .footer-nav-top {
+  float: left;
+  position: relative;
+  top: 50%;
+  transform: translateY(-56%);
+  display: inline-block;
   padding-top: 30px;
-   width: 80%;
+   width: 200px;
+   height: 120px;
   list-style-type: none;
-   margin: 0 auto;
+  margin-left: 400px;
+}
+
+#footer-title {
+  color: #fff;
 }
 
 .footer-nav-top li {
