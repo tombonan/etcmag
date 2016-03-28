@@ -29,6 +29,7 @@
   background-color: #916A70;
   transition: background-color 0.3s;
   display: none;
+  cursor: pointer;
 }
 
 .home-circle:hover {
@@ -53,7 +54,7 @@
 
 .home-header-nav {
   width: 80%;
-  margin: 6px auto;
+  margin: 2px auto;
   list-style-type: none;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -190,6 +191,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
   	font-size: 3.8em;
   	color: rgba(255, 255, 255, 0.9);
   	margin-top: 4px;
+}
+
+.home-feature-text a {
+	transition: opacity 0.3s;
+}
+
+.home-feature-text a:hover {
+	opacity: 0.7;
 }
 
 /* old feature container 
@@ -337,7 +346,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 .current-magazine-container {
 	margin: 0 auto;
 	width: 922px;
-	height: 360px;
+	height: 420px;
 	background-color: #f6f6f6;
 	border-top: 2px solid #916A70; 
 }
@@ -360,13 +369,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 }
 
 .current-magazine-content h3 {
-	width: 170%;
+	width: 100%;
 	border-bottom: 1px dotted #444;
 	font-family: 'Playfair Display', serif;
 	font-weight: 400;
 	color: #444;
 	font-size: 1.8em;
 	letter-spacing: 1px;
+}
+
+#current-magazine-author-name {
+	font-family: 'Crimson Text', serif;
+	font-weight: 400;
+	text-transform: uppercase;
+  	letter-spacing: -0.05em;
+	color: #404040;
+	font-size: 0.8em;
 }
 
 .articles-list {
@@ -495,7 +513,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 }
 
 .home-about-container {
-	margin-bottom: 100px;
+	margin-top: 100px;
+	margin-bottom: 160px;
 	background-color: #fff;
 	width: 100%;
 	text-align: center;

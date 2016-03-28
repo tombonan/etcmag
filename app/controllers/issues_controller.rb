@@ -30,6 +30,7 @@ class IssuesController < ApplicationController
 	def show
 		@issue = Issue.friendly.find(params[:id])
 		@articles = @issue.articles
+		@galleries = @issue.galleries
 	end
 
 	def edit

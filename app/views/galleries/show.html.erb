@@ -1,0 +1,19 @@
+<% provide(:title, "#{@gallery.title}") %>
+<%= render partial: 'layouts/imageheader' %>
+
+<div class = "gallery-show-image">
+	<div class = "gallery-show-overlay">
+		<%=image_tag(@gallery.gallery_attachments.first.avatar_url.to_s)%>
+		<div class = "gallery-head-text">
+				<h3><%= @gallery.issue.name %></h3>
+				<div></div>
+				<h1><%= @gallery.title %></h1>
+		</div>
+	</div>
+</div>
+
+<div class = "gallery-show-text">
+	<div class = "gallery-box-shadow">
+	</div>
+	<p><%=@gallery.body.html_safe %></p>
+</div>

@@ -32,4 +32,20 @@
 <div class = "issue-article-index">
 	<h5 class = "issue-article-head-text">Galleries</h5>
 	<div class = "issue-article-divider"></div>
+		<% for gallery in @galleries do %>
+		<div class = "issue-article-block">
+			<div class = "issue-index-image">
+				<%= link_to issue_gallery_path(@issue, gallery) do %>
+					<%= image_tag(gallery.gallery_attachments.first.avatar_url.to_s) %>
+				<% end %>
+			</div>
+			<div class = "issue-index-text">
+				<h1 id = "issue-article-title"><%=link_to gallery.title, issue_gallery_path(@issue, gallery) %></h1>
+				<h5 id = "issue-article-author">By <%=link_to gallery.author.name, author_path(gallery.author) %></h5>
+				<p id = "issue-article-teaser">
+					<%= truncate(gallery.body.html_safe, length: 180, separator: ' ', :escape => false) %>
+				</p>
+			</div>	
+		</div>
+		<% end %>
 </div>

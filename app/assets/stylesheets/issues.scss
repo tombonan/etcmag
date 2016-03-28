@@ -118,7 +118,7 @@
 	display: inline-block;
 	font-family: 'Raleway', sans-serif;
 	font-size: 1.1em;
-	color: #7a595e;
+	color: #606060;
 	margin-bottom: 30px;
 }
 
@@ -165,8 +165,11 @@
 
 #issue-article-author {
 	font-family: 'Crimson Text', serif;
+	font-weight: 400;
 	text-transform: uppercase;
-	color: #7a595e;
+  	letter-spacing: 0.05em;
+	color: #404040;
+	font-size: 0.8em;
 	margin-bottom: 12px;
 }
 

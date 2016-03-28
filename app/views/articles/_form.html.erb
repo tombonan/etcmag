@@ -7,11 +7,14 @@
 	<p>
 		<%= collection_select( :article, :author_id, Author.all.order('name ASC'), :id, :name, {}, { :multiple => false}) %>
 	</p>
-	<%= a.fields_for :article_attachments do |p| %>
-    	<div class="field">
-       		<%= p.label :avatar %><br>
-       		<%= p.file_field :avatar, :multiple => true, name: "article_attachments[avatar][]" %>
-     	</div>
+	<% if @article.article_attachments.count > 0 %>
+	<% else %>
+		<%= a.fields_for :article_attachments do |p| %>
+	    	<div class="field">
+	       		<%= p.label :avatar %><br>
+	       		<%= p.file_field :avatar, :multiple => true, name: "article_attachments[avatar][]" %>
+	     	</div>
+	   	<% end %>
    	<% end %>
 	<p>
 		<%= a.label :body %>:<br>

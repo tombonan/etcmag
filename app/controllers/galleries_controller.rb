@@ -3,21 +3,29 @@ class GalleriesController < ApplicationController
 
 	def new
 		@gallery = Gallery.new
+		@gallery_attachment = @gallery.gallery_attachments.build
 	end
 
 	def create
 		@gallery = @issue.galleries.new(params[:id])
 
-		if @gallery.update_attributes(gallery_params)
-			flash.notice = "'#{@gallery.title}' Created!"
-			redirect_to issue_article_path(@issue, @gallery)
-		else
-			render 'new'
-		end
+		respond_to do |format|
+	    	if @gallery.update_attributes(gallery_params)
+	       		params[:gallery_attachments]['avatar'].each do |b|
+	          		@gallery_attachment = @gallery.gallery_attachments.create!(:avatar => b)
+	       		end
+	       		format.html { redirect_to issue_gallery_path(@issue, @gallery), notice: 'Gallery was successfully created.' }
+	     	else
+	       		format.html { render action: 'new' }
+	     	end
+   		end
 	end
 
 	def show
 		@gallery = Gallery.friendly.find(params[:id])
+		@disable_nav = true
+		
+		@gallery_attachments = @gallery.gallery_attachments.all
 	end
 
 	def edit
@@ -28,7 +36,7 @@ class GalleriesController < ApplicationController
 		@gallery = Gallery.friendly.find(params[:id])
 		if @gallery.update_attributes(gallery_params)
 			flash.notice = "'#{@gallery.title}' Updated!"
-			redirect_to @gallery
+			redirect_to issue_gallery_path(@issue, @gallery)
 		else
 			render 'edit'
 		end
@@ -40,7 +48,7 @@ class GalleriesController < ApplicationController
 	private
 
 	def gallery_params
-		params.require(:gallery).permit(:title, :author_id, :body)
+		params.require(:gallery).permit(:title, :author_id, :body, gallery_attachments_attributes: [:id, :gallery_id, :avatar])
 	end
 
 	def load_issue

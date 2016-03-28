@@ -3,6 +3,7 @@ class Author < ActiveRecord::Base
 	friendly_id :name, use: :slugged
 	has_many :blogs
 	has_many :articles
+	has_many :galleries
 
 	#validations
 	

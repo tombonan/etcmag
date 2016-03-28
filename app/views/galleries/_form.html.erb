@@ -5,8 +5,18 @@
 		<%= g.text_field :title %>
 	</p>
 	<p>
-		<%= collection_select( :article, :author_id, Author.all.order('name ASC'), :id, :name, {}, { :multiple => false}) %>
+		<%= collection_select( :gallery, :author_id, Author.all.order('name ASC'), :id, :name, {}, { :multiple => false}) %>
 	</p>
+
+	<% if @gallery.gallery_attachments.count > 0 %>
+	<% else %>
+		<%= g.fields_for :gallery_attachments do |p| %>
+	    	<div class="field">
+	       		<%= p.label :avatar %><br>
+	       		<%= p.file_field :avatar, :multiple => true, name: "gallery_attachments[avatar][]" %>
+	     	</div>
+	   	<% end %>
+   	<% end %>
 	<p>
 		<%= g.label :body %>:<br>
 		<%= g.text_area :body, :class => 'ckeditor'%>

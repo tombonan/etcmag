@@ -11,8 +11,9 @@
 		</a>
 	</div>
 	<div class = "header-logo">
-			<h1><%= link_to "Etcetera", root_path %></h1>
-			<h3><%= link_to "Magazine", root_path %></h3>
+		<%= link_to root_path do %>
+			<%= image_tag('header-logo.png') %>
+		<% end %>
 	</div>
 	<ul class = "header-nav">
 		<li><p><%= link_to "About Us", about_path, class: cp(about_path) %></p></li>
@@ -20,6 +21,6 @@
 		<li><p><%= link_to "Magazine", magazine_path, class: mag %></p></li>
 		<li><p><%= link_to "Previous Issues", issues_path, class: cp(issues_path) %></p></li>
 		<li><p><%= link_to "Contributors", authors_path, class: cp(authors_path) %></p></li>
-		<li><p><%= link_to "Contact", contact_path, class: cp(contact_path) %></p></li>
+		<li class = 'home-header-li'><%= mail_to "etceterabucknell@gmail.com", "Contact" %></li>
 	</ul>
 </div>

@@ -2,11 +2,11 @@
 <%= render partial: 'layouts/imageheader' %>
 	<div class = "home-feature-container">
 		<div class = "home-feature-overlay">
-			<%= image_tag(("placeholders/home-feature.jpg"), :class => "home-feature-image" )%>
+			<%= image_tag((@gallery.gallery_attachments.first.avatar_url.to_s), :class => "home-feature-image" )%>
 			<div class = "home-feature-text">
-				<h3>Issue Title</h3>
+				<h3><%= @gallery.issue.name %></h3>
 				<div></div>
-				<h1>This Is a Placeholding Article Name</h1>
+				<h1><%= link_to @gallery.title, issue_gallery_path(@gallery.issue, @gallery) %></h1>
 			</div>
 		</div>
 	</div>
@@ -15,7 +15,7 @@
 		<% for article in @articles do %>
 		<div class = "article-block">
 			<%= link_to issue_article_path(article.issue, article) do %>
-				<%= image_tag(article.image_url.to_s) %>
+				<%= image_tag(article.article_attachments.first.avatar_url.to_s) %>
 			<% end %>
 			<div class = "article-preview-text">
 				<h5 id = "author-name"><%= link_to article.author.name, author_path(article.author) %></h5>
@@ -36,7 +36,10 @@
 			<h3><%= link_to @issue.name, issue_path(@issue)%></h3>
 			<ul class = "articles-list">
 				<% for article in @latestarticles do %>
-					<li><%= link_to article.title, issue_article_path(article.issue, article) %> &#8212; <span id = "author-name"><%= link_to article.author.name, author_path(article.author) %></span></li>
+					<li><%= link_to article.title, issue_article_path(article.issue, article) %> &#8212; <span id = "current-magazine-author-name"><%= link_to article.author.name, author_path(article.author) %></span></li>
+				<% end %>
+				<% for gallery in @latestgalleries do %>
+					<li><%= link_to gallery.title, issue_gallery_path(gallery.issue, gallery) %> &#8212; <span id = "current-magazine-author-name"><%= link_to gallery.author.name, author_path(gallery.author) %></span></li>
 				<% end %>
 			</ul>
 		</div>

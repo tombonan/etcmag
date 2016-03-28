@@ -16,7 +16,7 @@
 			<li class = 'home-header-li'><%= link_to "Magazine", magazine_path, class: mag %></li>
 			<li class = 'home-header-li'><%= link_to "Previous Issues", issues_path, class: cp(issues_path) %></li>
 			<li class = 'home-header-li'><%= link_to "Our Contributors", authors_path, class: cp(authors_path) %></li>
-			<li class = 'home-header-li'><%= link_to "Contact", contact_path, class: cp(contact_path) %></li>
+			<li class = 'home-header-li'><%= mail_to "etceterabucknell@gmail.com", "Contact" %></li>
 		</ul>
 	</div>
 </div>

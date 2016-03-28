@@ -1,3 +1,122 @@
 // Place all the styles related to the Galleries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.gallery-show-image {
+	width: 100%;
+	height: 80vh;
+	position: relative;
+	z-index: 5;
+	overflow: hidden; 
+}
+
+.gallery-show-overlay:after {
+ content: " ";
+  z-index: 10;
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: -moz-linear-gradient(top,  rgba(40,40,40,0.7) 0%, rgba(20,20,20,0.6) 25%, rgba(20,20,20,0.3) 100%);
+background: -webkit-linear-gradient(top,  rgba(40,40,40,0.7) 0%,rgba(20,20,20,0.6) 25%,rgba(20,20,20,0.3) 100%);
+background: linear-gradient(to bottom,  rgba(40,40,40,0.7) 0%,rgba(20,20,20,0.6) 25%,rgba(20,20,20,0.3) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', endColorstr='#4d141414',GradientType=0 );
+}
+
+.gallery-show-overlay img {
+	width: 100%;
+	position: absolute;
+   	left: 50%;
+   	top: 50%;
+   	transform: translate(-50%, -50%);
+}
+
+.gallery-head-text {
+	width: 100%;
+	height: 220px;
+	margin: auto;
+  	position: absolute;
+  	top: 280px; left: 0; bottom: 0; right: 0;
+  	z-index: 20;
+  	text-align: center;
+}
+
+.gallery-head-text h3 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: 1.2em;
+  	color: rgba(215, 215, 215, 0.95);
+  	margin-bottom: 10px;
+  	letter-spacing: 0.1em;
+}
+
+.gallery-head-text div {
+	height: 1px;
+	width: 40px;
+	margin: 0 auto;
+	background-color: rgba(215, 215, 215, 0.8);
+}
+
+.gallery-head-text h1 {
+	font-family: 'Feena Casual';
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	font-size: 3.8em;
+  	color: rgba(255, 255, 255, 0.85);
+  	margin-top: 20px;
+}
+
+.gallery-show-text {
+	width: 800px;
+	height: 500px;
+	background-color: #fff;
+	margin: -90px auto;
+	position: relative;
+	z-index: 20;
+	border-top: 4px solid #e4847e;
+}
+
+.gallery-show-text p {
+	line-height: 1.6;
+	font-size: 18px;
+	font-family: 'Crimson Text', serif;
+	font-weight: 400;
+	color: #444;
+	padding-top: 1.5%;
+	padding-left: 8%;
+	padding-right: 8%;
+}
+
+.gallery-show-text:after {
+	z-index: 20;
+	position: absolute;
+	height: 100%;
+	background-color: #fff;
+	display: block;
+	top: 0;
+  	left: 0;
+  	right: 0;
+}	
+
+.gallery-box-shadow {
+	position: absolute;
+    top: 84px;
+    height: 90px;
+    width: 100%;
+}
+
+.gallery-box-shadow:before {
+	left: -8px;
+    position: absolute;
+    content: url(image_path('shadow-before.png'));
+}
+
+.gallery-box-shadow:after {
+	right: -8px;
+    position: absolute;
+    content: url(image_path('shadow-after.png'));
+}
+
+
