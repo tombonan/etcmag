@@ -18,5 +18,4 @@ module ApplicationHelper
 			"active-nav" if current_page?(Issue.last)
 		end
 	end
-
 end
