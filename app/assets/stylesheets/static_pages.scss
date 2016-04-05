@@ -26,14 +26,14 @@
   border-radius: 50%;
   width: 50px;
   height: 50px; 
-  background-color: #916A70;
-  transition: background-color 0.3s;
+  background-color: #fff;
+  transition: opacity 0.3s;
   display: none;
   cursor: pointer;
 }
 
 .home-circle:hover {
-  background-color: #2c3e50;
+	opacity: 0.8;
 }
 
 .home-header-container h1 {
@@ -73,11 +73,14 @@
   font-size: 0.8em;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: color 0.2s
 }
 
-.home-header-li:hover {
-  color: #c3adb1;
+.home-header-nav li{
+	transition: color 0.2s;
+}
+
+.home-header-nav li:hover {
+  color: #7f4946;
 }
 
 /* -- header scroll css -- */
@@ -88,7 +91,7 @@
     right: 0;
     z-index:999;
     transition:0.3s top cubic-bezier(.3, .73, .3, .74);
-	background-color: #C5D9E2;
+	background-color: #fff;
     height: 40px;
     padding-top: 0px;
     box-shadow:         0px 3px 12px 0px rgba(50, 50, 50, 0.25);
@@ -120,6 +123,14 @@
 
 .home-circle-img.size {
   width: 100%;
+}
+
+.home-circle-img {
+  transition: opacity 0.2s;
+}
+
+.home-circle-img:hover {
+  opacity: 0.8;
 }
 
 body.down .home-header-container.animateIt {

@@ -93,14 +93,12 @@ a {
   border-radius: 50%;
   width: 50px;
   height: 50px; 
-  background-color: #916A70;
-  transition: background-color 0.3s;
+  background-color: #fff;
   display: none;
-  cursor: pointer;
 }
 
-.circle:hover {
-  background-color: #2c3e50;
+.header-logo img:hover {
+  opacity: 0.8;
 }
 
 .header-logo {
@@ -114,6 +112,7 @@ a {
   float: left;
   margin-left: 20%;
   margin-top: 12px;
+  transition: opacity 0.3s;
 }
 
 .header-nav {
@@ -184,6 +183,14 @@ a {
 
 .circle-img.size {
   width: 100%;
+}
+
+.circle-img {
+  transition: opacity 0.2s;
+}
+
+.circle-img:hover {
+  opacity: 0.8;
 }
 
 body.down .header-container.animateIt {
@@ -323,7 +330,7 @@ body.down .header-container.animateIt {
 }
 
 .footer-nav-top a:hover {
-  color: #ccc;
+  color: #b8b8b8;
 }
 
 .copyright-footer {
