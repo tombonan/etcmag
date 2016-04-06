@@ -6,14 +6,21 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
    <%= favicon_link_tag 'favicon.png' %>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <meta name="robots" content="index/follow">
+   <meta name="author" itemprop="creator accountablePerson" content="Tom Bonan">
+   <meta name="keywords" itemprop="copyrightHolder" content="magazine, Bucknell University, Etcetera Magazine, Et Cetera Magazine, EtcMag">
+   <meta name="copyright" content="Et Cetera is a copyright of Et Cetera Magazine at Bucknell University">
+   <meta name="description" content="Et Cetera is an artisan magazine that seeks to break the mold of other publications. Focusing on both presentation and content, Et Cetera will serve as a platform to delve into arts, culture, and the untold stories of Bucknell community members.">
 </head>
 <body>
-  <%= render partial: 'layouts/header' unless @disable_nav %>
 
-<% if current_user %>
+<%= render partial: 'layouts/header' unless @disable_nav %>
+<% if current_user %> <!-- admin control panel -->
   <%= render partial: 'layouts/admin' %>
 <% end %>
 
@@ -23,6 +30,7 @@
 	<% end %>
 	<%= yield %>
 </div>
+
 <%= render partial: 'layouts/footer' unless @disable_foot %>
 
 </body>

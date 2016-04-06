@@ -1,5 +1,6 @@
 <% provide(:title, 'Home') %>
 <%= render partial: 'layouts/imageheader' %>
+	<% if Issue.last.galleries.count > 0 %>
 	<div class = "home-feature-container">
 		<div class = "home-feature-overlay">
 			<%= image_tag((@gallery.gallery_attachments.first.avatar_url.to_s), :class => "home-feature-image" )%>
@@ -10,20 +11,23 @@
 			</div>
 		</div>
 	</div>
-	
+	<% end %> <!-- only display if there is a gallery -->
+
+	<% if Issue.last.articles.count > 0 %>
 	<div class = "magazine-preview-container">
 		<% for article in @articles do %>
 		<div class = "article-block">
 			<%= link_to issue_article_path(article.issue, article) do %>
-				<%= image_tag(article.article_attachments.first.avatar_url.to_s) %>
+				<%= image_tag(article.article_attachments.first.avatar.show) %>
 			<% end %>
 			<div class = "article-preview-text">
-				<h5 id = "author-name"><%= link_to article.author.name, author_path(article.author) %></h5>
 				<h3><%= link_to article.title, issue_article_path(article.issue, article) %></h3>
+				<h5 id = "author-name">By <%= link_to article.author.name, author_path(article.author) %></h5>
 			</div>
 		</div> <!-- article-block -->
 		<% end %>
 	</div>
+	<% end %> <!-- only display if there are articles -->
 
 	<div id = "thin-line-home"></div>
 	<div class = "current-magazine-container">
@@ -44,7 +48,14 @@
 			</ul>
 		</div>
 	</div>
-	
+
+	<div class = "home-about-container">
+		<div class = "home-about-text">
+			<p>Et Cetera is an artisan magazine that seeks to break the mold of other publications. Focusing on both presentation and content, Et Cetera will serve as a platform to delve into arts, culture, and the untold stories of Bucknell community members. </p>
+			<h5><a href="/about">Continue Reading &#10147;</a></h5>
+		</div>
+	</div>
+
 	<% if false %>
 	<div class = "blog-display-container">
 		<div class = "home-icon-container">
@@ -72,23 +83,6 @@
 	</div>
 	<% end %>
 
-	<div class = "home-about-container">
-		<div class = "home-icon-container">
-			<span class = "icon coffee"></span>
-			<span class = "icon pen-ruler"></span>
-			<span class = "icon newspaper"></span>
-			<span class = "icon puzzle"></span>
-		</div>
-		<div class = "home-about-title">
-			<h3 id = "home-about-title"><span>About the Magazine</span></h3>
-		</div>
-		<div class = "home-about-text">
-			<p>Quisque ut ante nibh. Proin ut bibendum ex, sed dapibus urna. In commodo arcu non venenatis egestas. Sed tempor ultricies lorem, eget aliquet sem faucibus sed. Sed non augue eget arcu bibendum maximus. Pellentesque sit amet nisl sed massa sagittis scelerisque a ac dolor. Donec laoreet id purus non mollis. In efficitur turpis nunc, quis dictum lorem tristique in. Maecenas ullamcorper dui sit amet sapien gravida, id molestie ex blandit. Mauris lobortis nisl risus, vitae fringilla massa mollis quis. Pellentesque ullamcorper mauris vel nisi vulputate efficitur. </p>
-			<h5><a href="/about">Continue Reading &#10147;</a></h5>
-		</div>
-	</div>
-	
 	<% if false %>	<%= render partial: 'layouts/signup' %> <% end %>
-	
-</div>
 
+</div>

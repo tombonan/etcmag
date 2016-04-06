@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160321205205) do
+ActiveRecord::Schema.define(version: 20160406172109) do
 
   create_table "article_attachments", force: :cascade do |t|
     t.integer  "article_id"
@@ -64,10 +64,11 @@ ActiveRecord::Schema.define(version: 20160321205205) do
     t.string   "title"
     t.text     "body"
     t.integer  "issue_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.string   "slug"
     t.integer  "author_id"
+    t.string   "photographer"
   end
 
   add_index "galleries", ["author_id"], name: "index_galleries_on_author_id"

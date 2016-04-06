@@ -8,7 +8,7 @@
 	height: 100vh;
 	position: relative;
 	z-index: 5;
-	overflow: hidden; 
+	overflow: hidden;
 }
 
 .article-show-overlay:after {
@@ -32,7 +32,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 }
 
 
-/* --- scroll arrow css -- */ 
+/* --- scroll arrow css -- */
 
 
 
@@ -123,7 +123,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 	font-family: 'Crimson Text', serif;
 	font-weight: 400;
 	color: #444;
-	padding-bottom: 40px;
-	/* border-right: 1px solid #bebebe; */
+}
+
+.article-show-filler {
+	width: 100%;
+	height: 100px;
+	background-color: #fff;
+}
+
+.article-image-container {
+	border-top: 1px solid #bebebe;
+	padding-top: 60px;
+	width: 100%;
 	margin-bottom: 60px;
+	margin-top: 40px;
+}
+
+.article-image {
+	max-width: 680px;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	padding-top: 25px;
+	padding-bottom: 25px;
 }

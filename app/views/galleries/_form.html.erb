@@ -7,12 +7,15 @@
 	<p>
 		<%= collection_select( :gallery, :author_id, Author.all.order('name ASC'), :id, :name, {}, { :multiple => false}) %>
 	</p>
-
+	<p>
+		<%= g.label :photographer %>:<br>
+		<%= g.text_field :photographer %>
+	</p>
 	<% if @gallery.gallery_attachments.count > 0 %>
 	<% else %>
 		<%= g.fields_for :gallery_attachments do |p| %>
 	    	<div class="field">
-	       		<%= p.label :avatar %><br>
+	       		<p>Image Upload:</p><br>
 	       		<%= p.file_field :avatar, :multiple => true, name: "gallery_attachments[avatar][]" %>
 	     	</div>
 	   	<% end %>

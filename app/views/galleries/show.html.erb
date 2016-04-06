@@ -17,3 +17,14 @@
 	</div>
 	<p><%=@gallery.body.html_safe %></p>
 </div>
+
+<div class="gallery-image-container">
+	<% for image in @gallery_attachments do %>
+		<%= image_tag(image.avatar.show, :class => "gallery-image") %>
+	<% end %>
+</div>
+
+<div class="gallery-author-container">
+	<h3 class="gallery-author">Written by <%=link_to @gallery.author.name, @gallery.author %></h3>
+	<h3 class="gallery-author">Photography by <%= @gallery.photographer %></h3>
+</div>

@@ -1,11 +1,12 @@
 <% provide(:title, "#{@issue.name}") %>
 <% if false %><%= render partial: 'issuesheader' %> <% end %>
 
+<div class="issue-show-wrapper">
 <div class = "issue-show-head">
 	<h1><%= @issue.name %></h1>
 	<div id = "issues-line-thin"></div>
 	<div id = "issues-line-thick"></div>
-	
+
 </div>
 
 <div class = "issue-article-index">
@@ -15,7 +16,7 @@
 		<div class = "issue-article-block">
 			<div class = "issue-index-image">
 				<%= link_to issue_article_path(@issue, article) do %>
-					<%= image_tag(article.article_attachments.first.avatar_url.to_s) %>
+					<%= image_tag(article.article_attachments.first.avatar.show) %>
 				<% end %>
 			</div>
 			<div class = "issue-index-text">
@@ -24,7 +25,7 @@
 				<p id = "issue-article-teaser">
 					<%= truncate(article.body.html_safe, length: 180, separator: ' ', :escape => false) %>
 				</p>
-			</div>	
+			</div>
 		</div>
 		<% end %>
 </div> <!-- issue article index -->
@@ -36,7 +37,7 @@
 		<div class = "issue-article-block">
 			<div class = "issue-index-image">
 				<%= link_to issue_gallery_path(@issue, gallery) do %>
-					<%= image_tag(gallery.gallery_attachments.first.avatar_url.to_s) %>
+					<%= image_tag(gallery.gallery_attachments.first.avatar.show) %>
 				<% end %>
 			</div>
 			<div class = "issue-index-text">
@@ -45,7 +46,8 @@
 				<p id = "issue-article-teaser">
 					<%= truncate(gallery.body.html_safe, length: 180, separator: ' ', :escape => false) %>
 				</p>
-			</div>	
+			</div>
 		</div>
 		<% end %>
 </div>
+</div><!-- issue show wrapper -->

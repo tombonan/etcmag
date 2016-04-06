@@ -1,9 +1,9 @@
 class IssuesController < ApplicationController
-	
+
   	def latest
-  		if Issue.all.count > 0 
+  		if Issue.all.count > 0
     		redirect_to issue_url(Issue.last)
-    	else 
+    	else
     		redirect_to root_url
     	end
   	end
@@ -41,7 +41,7 @@ class IssuesController < ApplicationController
 		@issue = Issue.friendly.find(params[:id])
 		if @issue.update_attributes(issue_params)
 			flash.notice = "#{@issue.name} Updated!"
-			redirect_to @issue 
+			redirect_to @issue
 		else
 			render 'edit'
 		end

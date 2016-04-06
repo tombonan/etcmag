@@ -16,8 +16,8 @@
   height: 200px;
   position: absolute;
   z-index: 20;
- -webkit-transition: background-color 0.6s cubic-bezier(.18, .20, .07, .78); 
--moz-transition: background-color 0.6s cubic-bezier(.18, .20, .07, .78); 
+ -webkit-transition: background-color 0.6s cubic-bezier(.18, .20, .07, .78);
+-moz-transition: background-color 0.6s cubic-bezier(.18, .20, .07, .78);
 }
 
 
@@ -25,7 +25,7 @@
   margin: 0 auto;
   border-radius: 50%;
   width: 50px;
-  height: 50px; 
+  height: 50px;
   background-color: #fff;
   transition: opacity 0.3s;
   display: none;
@@ -80,7 +80,7 @@
 }
 
 .home-header-nav li:hover {
-  color: #7f4946;
+  color: #e4847e;
 }
 
 /* -- header scroll css -- */
@@ -115,7 +115,7 @@
   display: block;
   float: left;
   width: 30px;
-  height: 30px; 
+  height: 30px;
   margin-left: 4%;
   top: 50%;
   transform: translateY(18%);
@@ -212,7 +212,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 	opacity: 0.7;
 }
 
-/* old feature container 
+/* old feature container
 .feature-container {
 	width: 60%;
 	margin: 20px auto;
@@ -246,7 +246,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 	top: 0;
   	left: 0;
   	right: 0;
-}	
+}
 
 .feature-content-container:hover {
 	box-shadow: 0px 5px 20px 0px rgba(50, 50, 50, 0.5);
@@ -338,6 +338,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 	font-size: 1.4em;
 	color: #444;
 	letter-spacing: 1px;
+	margin-bottom: 1px;
 }
 
 .article-preview-text a:hover {
@@ -349,7 +350,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 #thin-line-home {
 	margin: 80px auto;
 	width: 922px;
-	background-color: #916A70; 
+	background-color: #b66964;;
 	height: 1px;
 	margin-bottom: 1px;
 }
@@ -359,7 +360,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 	width: 922px;
 	height: 420px;
 	background-color: #f6f6f6;
-	border-top: 2px solid #916A70; 
+	border-top: 2px solid #b66964;
 }
 
 .fake-mag-cover {
@@ -380,7 +381,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 }
 
 .current-magazine-content h3 {
-	width: 100%;
+	width: 140%;
 	border-bottom: 1px dotted #444;
 	font-family: 'Playfair Display', serif;
 	font-weight: 400;
@@ -393,7 +394,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 	font-family: 'Crimson Text', serif;
 	font-weight: 400;
 	text-transform: uppercase;
-  	letter-spacing: -0.05em;
 	color: #404040;
 	font-size: 0.8em;
 }
@@ -417,10 +417,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 
 #author-name {
 	font-family: 'Crimson Text', serif;
-	font-size: 0.9em;
-	color: #745459;
+	font-weight: 400;
+	font-size: 0.8em;
+	color: #696969;
 	text-transform: uppercase;
-	letter-spacing: -1px;
+	letter-spacing: 0px;
 }
 
 
@@ -443,7 +444,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 }
 
 .home-blog-title-container {
-	margin: 0 auto; 
+	margin: 0 auto;
 	width: 70%;
 	margin-bottom: 60px;
 }
@@ -452,14 +453,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 	width: 100%;
 	margin: 0 auto;
 	line-height: 0.1em;
-  	margin: 10px 0 20px; 
+  	margin: 10px 0 20px;
     border-bottom: 1px solid #bebebe;
     letter-spacing: 1px;
 }
 
 #home-blog-title span {
-   background:#fff; 
-    padding:0 10px; 
+   background:#fff;
+    padding:0 10px;
 }
 
 .blog-home-display {
@@ -592,7 +593,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 
 
 .home-about-title {
-	width: 50%;
+	width: 600px;
 	margin: 0 auto;
 	padding-top: 10px;
 }
@@ -601,19 +602,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 	width: 100%;
 	margin: 0 auto;
 	line-height: 0.1em;
-  	margin: 10px 0 20px; 
+  	margin: 10px 0 20px;
     border-bottom: 1px solid #bebebe;
     letter-spacing: 1px;
 }
 
 #home-about-title span {
-   background:#fff; 
-    padding:0 10px; 
+   background:#fff;
+    padding:0 10px;
 }
 
 .home-about-text {
-	margin: 0 auto;
-	width: 46%;
+	margin: 30px auto;
+	width: 500px;
 	text-align: justify;
 }
 
@@ -682,7 +683,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 	width: 100%;
 	margin: 0 auto;
 	line-height: 0.12em;
-  	margin: 10px 0 20px; 
+  	margin: 10px 0 20px;
     border-bottom: 1px solid #bebebe;
     letter-spacing: 1px;
 	font-family: 'Playfair Display', serif;
@@ -693,8 +694,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 }
 
 #staff-about-title span {
-   	background:#fff; 
-    padding:0 10px; 
+   	background:#fff;
+    padding:0 10px;
 }
 
 .staff-bio {

@@ -7,24 +7,21 @@
 			<div id = "issues-line-thick"></div>
 		</div>
 		<div class = "issue-table">
-			
+
 			<% for issue in @issues do %>
 					<div class = "issue-block">
 						<%= link_to(issue) do %>
 							<%= image_tag(issue.image_url(:thumb).to_s, :class => "issue-block-image") %>
-						
+
 						<h5 class = "issue-name"><%= issue.name%></h5>
+						<h3 id = "issue-show-date"><%= issue.created_at.strftime("%d %B %Y")%></h3>
 						<% end %>
 					</div>
 			<% end %>
 			</tr>
-			
+
 		</div>
 	</div>
-	<div class = "features-list">
-		<h1 class = "featured">Featured</h1>
-	</div>
-	
 </div>
 
 

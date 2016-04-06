@@ -7,7 +7,7 @@
 	height: 80vh;
 	position: relative;
 	z-index: 5;
-	overflow: hidden; 
+	overflow: hidden;
 }
 
 .gallery-show-overlay:after {
@@ -70,7 +70,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 
 .gallery-show-text {
 	width: 800px;
-	height: 500px;
 	background-color: #fff;
 	margin: -90px auto;
 	position: relative;
@@ -89,6 +88,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 	padding-right: 8%;
 }
 
+.gallery-show-text a:hover {
+	text-decoration: underline;
+}
+
 .gallery-show-text:after {
 	z-index: 20;
 	position: absolute;
@@ -98,7 +101,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 	top: 0;
   	left: 0;
   	right: 0;
-}	
+}
 
 .gallery-box-shadow {
 	position: absolute;
@@ -119,4 +122,42 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
     content: url(image_path('shadow-after.png'));
 }
 
+.gallery-image-container {
+	width: 100%;
+	margin-bottom: 20px;
+	margin-top: 180px;
+}
 
+.gallery-image {
+	max-width: 680px;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.gallery-author-container {
+	width: 340px;
+	margin: 0 auto;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding-top: 1.5%;
+	padding-bottom: 1.5%;
+	margin-bottom: 80px;
+}
+
+.gallery-author {
+	text-align: center;
+	font-family: 'Crimson Text', serif;
+	font-weight: 400;
+	color: #696969;
+	text-transform: uppercase;
+	line-height: 1.6;
+	font-size: 0.8em;
+	letter-spacing: 1px;
+}
+
+.gallery-author a:hover {
+	text-decoration: underline;
+}

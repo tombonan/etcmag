@@ -4,11 +4,11 @@ class AuthorsController < ApplicationController
 	end
 
 	def new
-		
+
 	end
 
 	def create
-		
+
 	end
 
 	def edit
@@ -16,13 +16,14 @@ class AuthorsController < ApplicationController
 	end
 
 	def update
-		
+
 	end
 
 	def show
 		@author = Author.friendly.find(params[:id])
 		@blogs = @author.blogs.order(created_at: :desc)
 		@articles = @author.articles.order(created_at: :desc)
+		@galleries = @author.galleries.order(created_at: :desc)
 	end
 
 private

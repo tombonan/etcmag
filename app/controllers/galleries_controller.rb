@@ -24,7 +24,7 @@ class GalleriesController < ApplicationController
 	def show
 		@gallery = Gallery.friendly.find(params[:id])
 		@disable_nav = true
-		
+
 		@gallery_attachments = @gallery.gallery_attachments.all
 	end
 
@@ -48,7 +48,7 @@ class GalleriesController < ApplicationController
 	private
 
 	def gallery_params
-		params.require(:gallery).permit(:title, :author_id, :body, gallery_attachments_attributes: [:id, :gallery_id, :avatar])
+		params.require(:gallery).permit(:title, :author_id, :body, :photographer, gallery_attachments_attributes: [:id, :gallery_id, :avatar])
 	end
 
 	def load_issue

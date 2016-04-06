@@ -11,9 +11,9 @@
 		<h3 id = "article-show-issue"><%=link_to @article.issue.name, @article.issue %> <span id = "article-show-date"> | <%= @article.issue.created_at.strftime("%d %B %Y")%></span></h3>
 		<h3>By <%= link_to @article.author.name, @article.author %></h3>
 	</div>
-	
+
 	<div class = "article-show-divider">
-		
+
 	</div>
 
 	<div class = "article-show-title">
@@ -25,5 +25,16 @@
 		<p><%=@article.body.html_safe %></p>
 </div>
 
+<% if @article.article_attachments.count == 1 %>
+	<div class="article-show-filler">
 
+	</div>
+<% end %>
 
+<% if @article.article_attachments.count > 1 %>
+<div class="article-image-container">
+	<% for image in @article_attachments do %>
+		<%= image_tag(image.avatar.show, :class => "article-image") %>
+	<% end %>
+</div>
+<% end %>
