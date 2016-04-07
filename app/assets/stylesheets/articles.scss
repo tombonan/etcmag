@@ -179,14 +179,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 		display: none;
 	}
 
-	.article-show-title, .article-show-head-mobile  {
+	.article-show-title, .article-show-head-mobile {
 		display: block;
 		top: 0;
   	transform: none;
-		padding-left: 70px;
+		padding-left: 20px;
 	}
 
 	.article-show-title {
 		margin-top: 50px;
+	}
+
+	.article-image-container {
+		width: 92%;
+		margin: 0 auto;
+	}
+
+	.article-image {
+		width: 100%;
+		height: auto;
 	}
 }

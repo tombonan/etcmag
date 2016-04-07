@@ -105,7 +105,7 @@
   display: none;
 }
 
-.mobile-nav.right {
+.mobile-nav.right, .mobile-nav-app {
 	float: right;
 	margin-right: 3%;
 }
@@ -313,64 +313,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 
 */
 
-@media only screen and (max-width: 850px) {
-	.home-header-li {
-		margin-left: 15px;
-		margin-right: 15px;
-	}
 
-	.home-header-li.color {
-		margin-left: 10px;
-	  margin-right: 10px;
-	}
-}
-
-@media only screen and (max-width: 700px) {
-	.home-header-container {
-		position: relative;
-	}
-
-	.home-head-nav-block {
-		display: none;
-	}
-
-	.home-header-container {
-		height: 100px;
-	}
-
-	.home-header-container h1 {
-		line-height: 100px;
-		font-size: 2.8em;
-		display: inline-block;
-		margin-top: 0;
-	}
-
-	.home-header-container h1, .home-header-li {
-		color: #444;
-	}
-
-	.mobile-nav {
-		float: left;
-		width: 24px;
-		height: 24px;
-		display: inline-block;
-		position: relative;
-		overflow: hidden;
-		text-indent: 105%;
-		white-space: nowrap;
-		vertical-align: middle;
-		background: url(image_path('mobile-nav.png'));
-		top: 50%;
-  	transform: translateY(-50%);
-		margin-left: 3%;
-	}
-}
-
-@media only screen and (max-width: 490px) {
-	.home-header-container h1 {
-		font-size: 2em;
-	}
-}
 
 /* -- magazine preview css -- */
 .magazine-preview-container {
@@ -449,7 +392,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 }
 
 .current-magazine-content h3 {
-	width: 140%;
+	width: 90%;
 	border-bottom: 1px dotted #444;
 	font-family: 'Playfair Display', serif;
 	font-weight: 400;
@@ -694,6 +637,141 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 	line-height: 1.6;
 }
 
+@media only screen and (max-width: 850px) {
+	.home-header-li {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
+	.home-header-li.color {
+		margin-left: 10px;
+	  margin-right: 10px;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.home-header-container {
+		position: relative;
+	}
+
+	.home-head-nav-block {
+		display: none;
+	}
+
+	.home-header-container {
+		height: 100px;
+	}
+
+	.home-header-container h1 {
+		line-height: 100px;
+		font-size: 2.8em;
+		display: inline-block;
+		margin-top: 0;
+	}
+
+	.home-header-container h1, .home-header-li {
+		color: #444;
+	}
+
+	.mobile-nav {
+		float: left;
+		width: 24px;
+		height: 24px;
+		display: inline-block;
+		position: relative;
+		overflow: hidden;
+		text-indent: 105%;
+		white-space: nowrap;
+		vertical-align: middle;
+		background: url(image_path('mobile-nav.png'));
+		top: 50%;
+  	transform: translateY(-50%);
+		margin-left: 3%;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.magazine-preview-container {
+		width: 94%;
+	}
+
+	.article-block {
+		width: 100%;
+		margin-bottom: 150px;
+	}
+
+	.article-block img {
+		height: auto;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.home-feature-text {
+		position: relative;
+		margin-top: 0px;
+	}
+
+	.home-feature-container {
+		width: 92%;
+		margin: 0 auto;
+	}
+
+	.home-feature-overlay:after {
+		display: none;
+	}
+
+	.home-feature-image {
+		position: relative;
+		height: auto;
+	}
+
+	.home-feature-text h3,  .home-feature-text h1{
+			color: #444;
+	}
+
+	.home-feature-text div {
+			background-color: rgba(200, 200, 200, 0.9);
+	}
+
+	.fake-mag-cover {
+		display: none;
+	}
+
+	.current-magazine-content h3 {
+		margin-left: 40px;
+		margin-top: 40px;
+	}
+
+	.current-magazine-content {
+		display: block;
+		float: left;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 570px) {
+	.home-feature-text h1{
+		font-size: 2em;
+	}
+
+	.home-feature-text h3 {
+		font-size: 0.9em;
+	}
+
+	.article-block:first-of-type {
+		margin-top: -150px;
+	}
+
+	.article-block {
+		margin-bottom: 100px;
+	}
+}
+
+@media only screen and (max-width: 490px) {
+	.home-header-container h1 {
+		font-size: 2em;
+	}
+}
 
 /* -- about-the-magazine css -- */
 .about-the-mag-container {
@@ -737,23 +815,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 }
 
 .staff-list-text {
-	line-height: 1.2;
-	font-family: 'Crimson Text', serif;
-	font-weight: 400;
-	color: #444;
-}
-
-.about-block {
-	display: inline-block;
-	vertical-align: top;
-	width: 320px;
-	margin-left: 100px;
-	margin-top: -42px;
-	text-align: justify;
-}
-
-.about-block p {
-	padding-top: 22px;
 	line-height: 1.2;
 	font-family: 'Crimson Text', serif;
 	font-weight: 400;

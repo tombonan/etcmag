@@ -39,6 +39,7 @@ $(document).ready(function () {
         $('.header-logo').toggleClass("hide", ($(window).scrollTop() > 340)),
         $('.header-nav').toggleClass("up", ($(window).scrollTop() > 340)),
         $('.circle').toggleClass("move", ($(window).scrollTop() > 340)),
+        $('.mobile-nav-app').toggleClass("right", ($(window).scrollTop() > 340)),
         $('.circle-img').toggleClass("size", ($(window).scrollTop() > 340)),
         $('.header-social-links').toggleClass("appear", ($(window).scrollTop() > 340));
      });

@@ -182,3 +182,46 @@
 		 padding-right: 2%;
 	 }
  }
+
+ @media only screen and (max-width: 700px) {
+	 .issue-article-index {
+		 width: 94%;
+		 margin: 0 auto;
+	 }
+	 .issue-article-head-text, .issue-article-divider {
+		 display: none;
+	 }
+
+	 .issue-article-block {
+		 margin-top: 30px;
+		 margin-bottom: 30px;
+	 }
+	 .issue-index-image, .issue-index-text {
+		 float: left;
+		 display: inline-block;
+		 width: 100%;
+		margin-top: 100px;
+		margin-left: 0;
+	 }
+
+	 .issue-index-image img {
+		 height: auto;
+	 }
+
+}
+
+ @media only screen and (max-width: 500px) {
+	 .issue-index-image, .issue-index-text {
+		 margin-top: 50px;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+ .issue-index-text {
+		margin-top: -10px;
+ }
+
+ .issue-index-image {
+	 margin-top: 50px;
+ }
+}
