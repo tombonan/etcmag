@@ -7,6 +7,10 @@
 	<p>
 		<%= collection_select( :article, :author_id, Author.all.order('name ASC'), :id, :name, {}, { :multiple => false}) %>
 	</p>
+	<p>
+		<%= a.label :photographer %>:<br>
+		<%= a.text_field :photographer %>
+	</p>
 	<% if @article.article_attachments.count > 0 %>
 	<% else %>
 		<%= a.fields_for :article_attachments do |p| %>

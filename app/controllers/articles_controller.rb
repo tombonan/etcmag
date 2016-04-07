@@ -48,7 +48,7 @@ class ArticlesController < ApplicationController
 	private
 
 	def article_params
-		params.require(:article).permit(:title, :author_id, :body, :image, article_attachments_attributes: [:id, :article_id, :avatar])
+		params.require(:article).permit(:title, :author_id, :body, :photographer, article_attachments_attributes: [:id, :article_id, :avatar])
 	end
 
 	def load_issue
