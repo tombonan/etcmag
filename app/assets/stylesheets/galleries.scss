@@ -35,7 +35,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 
 .gallery-head-text {
 	width: 100%;
-	height: 220px;
+	min-height: 220px;
 	margin: auto;
   	position: absolute;
   	top: 280px; left: 0; bottom: 0; right: 0;
@@ -160,4 +160,53 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 
 .gallery-author a:hover {
 	text-decoration: underline;
+}
+
+@media only screen and (max-width: 810px) {
+	.gallery-show-text {
+		width: 100%;
+	}
+
+	.gallery-show-text p {
+		text-align: justify;
+	}
+
+	.gallery-show-image {
+		height: 100vh;
+	}
+
+	.gallery-show-overlay img {
+		height: 100%;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.gallery-show-image, .gallery-box-shadow {
+		display: none;
+	}
+
+	.gallery-head-text {
+		position: relative;
+		top: 0;
+	}
+
+	.gallery-show-text {
+		margin: 40px auto;
+	}
+
+	.gallery-show-text p {
+		line-height: 1.4;
+	}
+
+	.gallery-image-container {
+		width: 92%;
+		margin: 0 auto;
+	}
+
+	.gallery-image {
+		width: 100%;
+		height: auto;
+	}
+
+
 }

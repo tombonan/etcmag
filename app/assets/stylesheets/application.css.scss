@@ -375,6 +375,33 @@ body.down .header-container.animateIt {
   color: #68696e;
 }
 
+@media only screen and (max-width: 724px) {
+  #footer-logo {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .footer-nav-top li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .footer-nav-top li {
+    font-size: 0.7em;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .footer-nav-top li {
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 0.6em;
+  }
+}
+
 
 
 /* -- signup css -- */

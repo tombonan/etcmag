@@ -19,6 +19,11 @@
 	<div class = "article-show-title">
 		<h1><%= @article.title %></h1>
 	</div>
+
+	<div class = "article-show-head-mobile">
+		<h3 id = "article-show-issue"><%=link_to @article.issue.name, @article.issue %> <span id = "article-show-date"> | <%= @article.issue.created_at.strftime("%d %B %Y")%></span></h3>
+		<h3>By <%= link_to @article.author.name, @article.author %></h3>
+	</div>
 </div>
 
 <div class = "article-show-text">

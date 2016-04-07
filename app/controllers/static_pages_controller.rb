@@ -6,7 +6,7 @@ class StaticPagesController < ApplicationController
 
 		@latestarticles = Issue.last.articles
 		@latestgalleries = Issue.last.galleries
-		
+
 		@disable_nav = true
 		@issue = Issue.last
 	end

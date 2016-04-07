@@ -4,11 +4,17 @@ class AuthorsController < ApplicationController
 	end
 
 	def new
-
+		@author = Author.new
 	end
 
 	def create
-
+		@author = Author.new(author_params)
+		if @author.update_attributes(author_params)
+			flash.notice = "Author '#{@author.name}' created"
+			redirect_to @author
+		else
+			render 'new'
+		end
 	end
 
 	def edit
@@ -16,7 +22,13 @@ class AuthorsController < ApplicationController
 	end
 
 	def update
-
+		@author = Author.friendly.find(params[:id])
+		if @author.update_attributes(author_params)
+			flash.notice = "Author '#{@author.name}' created"
+			redirect_to @author
+		else
+			render 'edit'
+		end
 	end
 
 	def show
@@ -31,6 +43,5 @@ private
 	def author_params
 		params.require(:author).permit(:name, :email, :year, :bio)
 	end
-
 
 end

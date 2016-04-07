@@ -49,40 +49,6 @@
 		</div>
 	</div>
 
-	<div class = "home-about-container">
-		<div class = "home-about-text">
-			<p>Et Cetera is an artisan magazine that seeks to break the mold of other publications. Focusing on both presentation and content, Et Cetera will serve as a platform to delve into arts, culture, and the untold stories of Bucknell community members. </p>
-			<h5><a href="/about">Continue Reading &#10147;</a></h5>
-		</div>
-	</div>
-
-	<% if false %>
-	<div class = "blog-display-container">
-		<div class = "home-icon-container">
-			<span class = "icon laptop"></span>
-			<span class = "icon box"></span>
-			<span class = "icon layer"></span>
-			<span class = "icon computer"></span>
-		</div>
-		<div class = "home-blog-title-container">
-			<h3 id = "home-blog-title"><span>From The Blog</span></h3>
-		</div>
-		<% for blog in @blogs do %>
-		<div class = "blog-home-display">
-			<div class = "blog-display-left">
-				<%= link_to(blog) do %>
-					<%= image_tag(blog.image_url.to_s, :class => "blog-home-image") %>
-				<% end %>
-			</div>
-			<div class = "blog-display-right">
-				<h3><%= link_to blog.title, blog_path(blog)%></h3>
-				<h4><span id = "author-name"><%= link_to blog.author.name, author_path(blog.author) %></span><span id = "home-blog-date"> | <%=blog.created_at.strftime("%d %B, %Y")%></span></h4>
-			</div>
-		</div>
-		<% end %>
-	</div>
-	<% end %>
-
 	<% if false %>	<%= render partial: 'layouts/signup' %> <% end %>
 
 </div>

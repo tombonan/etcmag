@@ -1,0 +1,15 @@
+<div class = "blog-form-container">
+  <% @author.errors.each_with_index do |msg, i| %>
+         <h1 id = "validation-error-message"><%= msg[1] %></h1>
+  <% end %>
+
+  <%= form_for @author do |a| %>
+  <p>
+    <%= a.label :name %>:<br>
+    <%= a.text_field :name %>
+  </p>
+  <p>
+		<%= a.submit "Update"%>
+	</p>
+  <% end %>
+</div>
