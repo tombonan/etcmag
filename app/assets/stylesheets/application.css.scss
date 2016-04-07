@@ -422,8 +422,24 @@ body.down .header-container.animateIt {
     font-size: 0.7em;
   }
 }
-
 @media only screen and (max-width: 430px) {
+  .footer-nav-top li {
+    margin-left: 6px;
+    margin-right: 6px;
+    font-size: 0.7em;
+  }
+
+  .footer-nav-top {
+    margin-left: -10px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .footer-nav-top li {
+    font-size: 0.6em;
+  }
+
+}
+@media only screen and (max-width: 320px) {
   .footer-nav-top li {
     margin-left: 6px;
     margin-right: 6px;

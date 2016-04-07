@@ -1,7 +1,8 @@
 class StaticPagesController < ApplicationController
 	def home
 		@blogs = Blog.last(4).reverse
-		@articles = Issue.last.articles.last(3)
+		offset = rand(Issue.last.articles.count)
+		@articles = Issue.last.articles.offset(offset).first(3)
 		@gallery = Gallery.first
 
 		@latestarticles = Issue.last.articles
