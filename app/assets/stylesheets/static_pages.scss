@@ -426,7 +426,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 .current-magazine-container {
 	margin: 0 auto 120px;
 	width: 922px;
-	height: 420px;
+	min-height: 640px;
 	background-color: #f6f6f6;
 	border-top: 2px solid #b66964;
 }
@@ -729,9 +729,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3282828', e
 
 .staff-list-head {
 	padding-top: 18px;
-	text-transform: lowercase;
-	font-family: 'Crimson Text', serif;
-	font-weight: 400;
+	font-family: 'Feena Casual';
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
 	color: #e4847e;
 	font-size: 1.2em;
 }
