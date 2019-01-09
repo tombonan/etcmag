@@ -5,29 +5,23 @@
 		<%=image_tag(@article.article_attachments.first.avatar_url.to_s)%>
 	</div>
 </div>
-
 <div class = "article-show-head-container">
 	<div class = "article-show-head">
 		<h3 id = "article-show-issue"><%=link_to @article.issue.name, @article.issue %> <span id = "article-show-date"> | <%= @article.issue.created_at.strftime("%d %B %Y")%></span></h3>
 		<h3>By <%= link_to @article.author.name, @article.author %></h3>
 		<% if @article.photographer? %><h3>Photography by <%= @article.photographer %></h3><% end %>
 	</div>
-
 	<div class = "article-show-divider">
-
 	</div>
-
 	<div class = "article-show-title">
 		<h1><%= @article.title %></h1>
 	</div>
-
 	<div class = "article-show-head-mobile">
 		<h3 id = "article-show-issue"><%=link_to @article.issue.name, @article.issue %> <span id = "article-show-date"> | <%= @article.issue.created_at.strftime("%d %B %Y")%></span></h3>
 		<h3>By <%= link_to @article.author.name, @article.author %></h3>
 		<% if @article.photographer? %><h3>Photography by <%= @article.photographer %></h3><% end %>
 	</div>
 </div>
-
 <div class = "article-show-text">
 		<p><%=@article.body.html_safe %></p>
 </div>
